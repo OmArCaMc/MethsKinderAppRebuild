@@ -5,18 +5,8 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/start_bg"
     tools:context=".MainActivity">
-
-    <ImageView
-        android:id="@+id/background"
-        android:layout_width="@dimen/_600sdp"
-        android:layout_height="@dimen/_500sdp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/start_bg"
-        android:contentDescription="@string/start_page_bg" />
 
     <ImageView
         android:id="@+id/startBttn"
@@ -25,10 +15,10 @@
         android:layout_marginTop="@dimen/_200sdp"
         android:layout_marginStart="@dimen/_140sdp"
         android:layout_marginEnd="@dimen/_10sdp"
-        app:layout_constraintBottom_toBottomOf="@+id/background"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/exitBttn"
-        app:layout_constraintStart_toStartOf="@+id/background"
-        app:layout_constraintTop_toTopOf="@+id/background"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/button"
         android:contentDescription="@string/start_button" />
 
@@ -39,10 +29,10 @@
         android:layout_marginTop="@dimen/_200sdp"
         android:layout_marginStart="@dimen/_10sdp"
         android:layout_marginEnd="@dimen/_140sdp"
-        app:layout_constraintBottom_toBottomOf="@+id/background"
-        app:layout_constraintEnd_toEndOf="@+id/background"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/startBttn"
-        app:layout_constraintTop_toTopOf="@+id/background"
+        app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/button"
         android:contentDescription="@string/exit_button" />
 
