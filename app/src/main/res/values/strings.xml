@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">AniMate</string>
+    // Button text
+    <string name="comenzar">Comenzar</string>
+    <string name="salir">Salir</string>
+    // Image description
+    <string name="start_page_bg">Start page background</string>
+    <string name="start_button">Start button image</string>
+    <string name="exit_button">Exit button image</string>
+    <string name="menu">Menu</string>
+</resources>
