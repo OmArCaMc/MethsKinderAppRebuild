@@ -6,6 +6,10 @@ android {
     namespace 'com.example.animate'
     compileSdk 34
 
+    buildFeatures{
+        dataBinding = true
+    }
+
     defaultConfig {
         applicationId "com.example.animate"
         minSdk 24
@@ -43,3 +47,4 @@ dependencies {
     // For SSP, use this:
     implementation libs.ssp.android
 }
+
