@@ -5,15 +5,93 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".menu">
+    android:background="@drawable/menu_bg"
+    tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/menu"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+    <Button
+        android:id="@+id/Tema1"
+        android:layout_width="@dimen/_94sdp"
+        android:layout_height="@dimen/_90sdp"
+        android:background="@android:color/transparent"
+        android:layout_marginStart="@dimen/_54sdp"
+        android:layout_marginTop="@dimen/_100sdp"
+        android:layout_marginBottom="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/Tema5"
+        app:layout_constraintEnd_toStartOf="@+id/Tema2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/Tema2"
+        android:layout_width="@dimen/_94sdp"
+        android:layout_height="@dimen/_90sdp"
+        android:background="@android:color/transparent"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="@dimen/_84sdp"
+        app:layout_constraintStart_toEndOf="@id/Tema1"
+        app:layout_constraintBottom_toTopOf="@+id/Tema6"
+        app:layout_constraintEnd_toStartOf="@+id/Tema3"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/Tema3"
+        android:layout_width="@dimen/_94sdp"
+        android:layout_height="@dimen/_90sdp"
+        android:background="@android:color/transparent"
+        android:layout_marginTop="@dimen/_82sdp"
+        app:layout_constraintStart_toEndOf="@id/Tema2"
+        app:layout_constraintEnd_toStartOf="@+id/Tema4"
+        app:layout_constraintBottom_toTopOf="@id/Tema6"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/Tema4"
+        android:layout_width="@dimen/_94sdp"
+        android:layout_height="@dimen/_90sdp"
+        android:background="@android:color/transparent"
+        android:layout_marginEnd="@dimen/_60sdp"
+        android:layout_marginTop="@dimen/_98sdp"
+        app:layout_constraintStart_toEndOf="@id/Tema3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/Tema7"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/Tema5"
+        android:layout_width="@dimen/_94sdp"
+        android:layout_height="@dimen/_90sdp"
+        android:background="@android:color/transparent"
+        android:layout_marginBottom="@dimen/_8sdp"
+        android:layout_marginStart="@dimen/_122sdp"
+        android:layout_marginEnd="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/Tema6"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Tema1" />
+
+    <Button
+        android:id="@+id/Tema6"
+        android:layout_width="@dimen/_94sdp"
+        android:layout_height="@dimen/_90sdp"
+        android:layout_marginStart="0dp"
+        android:layout_marginEnd="0dp"
+        android:background="@android:color/transparent"
+        android:layout_marginBottom="@dimen/_24sdp"
+        app:layout_constraintStart_toEndOf="@id/Tema5"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/Tema7"
+        app:layout_constraintTop_toBottomOf="@+id/Tema3" />
+
+    <Button
+        android:id="@+id/Tema7"
+        android:layout_width="@dimen/_94sdp"
+        android:layout_height="@dimen/_90sdp"
+        android:background="@android:color/transparent"
+        android:layout_marginStart="0dp"
+        android:layout_marginEnd="@dimen/_112sdp"
+        android:layout_marginBottom="@dimen/_8sdp"
+        app:layout_constraintStart_toEndOf="@id/Tema6"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Tema4" />
 </androidx.constraintlayout.widget.ConstraintLayout>

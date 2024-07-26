@@ -8,11 +8,32 @@
         android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:screenOrientation="landscape"
         android:roundIcon="@mipmap/ic_launcher_round"
+        android:screenOrientation="landscape"
         android:supportsRtl="true"
         android:theme="@style/Theme.AniMate"
         tools:targetApi="31">
+        <activity
+            android:name=".tema7"
+            android:exported="false" />
+        <activity
+            android:name=".tema6"
+            android:exported="false" />
+        <activity
+            android:name=".tema5"
+            android:exported="false" />
+        <activity
+            android:name=".tema4"
+            android:exported="false" />
+        <activity
+            android:name=".tema3"
+            android:exported="false" />
+        <activity
+            android:name=".tema2"
+            android:exported="false" />
+        <activity
+            android:name=".Tema1"
+            android:exported="false" />
         <activity
             android:name=".menu"
             android:exported="false" />
