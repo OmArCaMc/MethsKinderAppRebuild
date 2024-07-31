@@ -32,13 +32,13 @@
             android:name=".tema2"
             android:exported="false" />
         <activity
-            android:name=".Tema1"
+            android:name=".tema1"
             android:exported="false" />
         <activity
             android:name=".menu"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".startActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
