@@ -14,25 +14,25 @@
         android:theme="@style/Theme.AniMate"
         tools:targetApi="31">
         <activity
-            android:name=".tema7"
+            android:name=".topic7screen"
             android:exported="false" />
         <activity
-            android:name=".tema6"
+            android:name=".topic6screen"
             android:exported="false" />
         <activity
-            android:name=".tema5"
+            android:name=".topic5screen"
             android:exported="false" />
         <activity
-            android:name=".tema4"
+            android:name=".topic4screen"
             android:exported="false" />
         <activity
-            android:name=".tema3"
+            android:name=".topic3screen"
             android:exported="false" />
         <activity
-            android:name=".tema2"
+            android:name=".topic2screen"
             android:exported="false" />
         <activity
-            android:name=".tema1"
+            android:name=".topic1screen"
             android:exported="false" />
         <activity
             android:name=".menu"

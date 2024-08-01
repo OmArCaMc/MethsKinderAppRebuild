@@ -1,5 +1,6 @@
 package com.example.animate;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -10,8 +11,8 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-// Define the topic 3 class that extends AppCompatActivity.
-public class tema3 extends AppCompatActivity {
+// Define the topic 1 class that extends AppCompatActivity.
+public class topic1screen extends AppCompatActivity {
     // Declare a button named back to return.
     Button back;
 
@@ -20,9 +21,9 @@ public class tema3 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         // Call the superclass constructor.
         super.onCreate(savedInstanceState);
-        // Set the layout for the activity to 'activity_tema3'.
+        // Set the layout for the activity to 'activity_tema1'.
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_tema3);
+        setContentView(R.layout.activity_tema1);
 
         // Set a listener to apply window insets correctly.
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {

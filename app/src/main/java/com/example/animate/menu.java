@@ -13,7 +13,6 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 public class menu extends AppCompatActivity {
-
     Button tema1Button;
     Button tema2Button;
     Button tema3Button;
@@ -37,7 +36,7 @@ public class menu extends AppCompatActivity {
         tema1Button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(menu.this, tema1.class);
+                Intent intent = new Intent(menu.this, topic1screen.class);
                 startActivity(intent);
             }
         });
@@ -46,7 +45,7 @@ public class menu extends AppCompatActivity {
         tema2Button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(menu.this, tema2.class);
+                Intent intent = new Intent(menu.this, topic2screen.class);
                 startActivity(intent);
             }
         });
@@ -55,7 +54,7 @@ public class menu extends AppCompatActivity {
         tema3Button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(menu.this, tema3.class);
+                Intent intent = new Intent(menu.this, topic3screen.class);
                 startActivity(intent);
             }
         });
@@ -64,7 +63,7 @@ public class menu extends AppCompatActivity {
         tema4Button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(menu.this, tema4.class);
+                Intent intent = new Intent(menu.this, topic4screen.class);
                 startActivity(intent);
             }
         });
@@ -73,7 +72,7 @@ public class menu extends AppCompatActivity {
         tema5Button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(menu.this, tema5.class);
+                Intent intent = new Intent(menu.this, topic5screen.class);
                 startActivity(intent);
             }
         });
@@ -82,7 +81,7 @@ public class menu extends AppCompatActivity {
         tema6Button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(menu.this, tema6.class);
+                Intent intent = new Intent(menu.this, topic6screen.class);
                 startActivity(intent);
             }
         });
@@ -91,7 +90,7 @@ public class menu extends AppCompatActivity {
         tema7Button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(menu.this, tema7.class);
+                Intent intent = new Intent(menu.this, topic7screen.class);
                 startActivity(intent);
             }
         });

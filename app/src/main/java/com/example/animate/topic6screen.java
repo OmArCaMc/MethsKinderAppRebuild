@@ -11,7 +11,7 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 // Define the topic 6 class that extends AppCompatActivity.
-public class tema6 extends AppCompatActivity {
+public class topic6screen extends AppCompatActivity {
     // Declare a button named back to return.
     Button back;
 

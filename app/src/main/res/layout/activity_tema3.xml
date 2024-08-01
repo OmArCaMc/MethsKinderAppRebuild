@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/catalogue_topic_3"
-    tools:context=".tema3">
+    tools:context=".topic3screen">
 
     <Button
         android:id="@+id/backBttn"

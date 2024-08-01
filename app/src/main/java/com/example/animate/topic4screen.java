@@ -10,8 +10,8 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-// Define the topic 1 class that extends AppCompatActivity.
-public class tema5 extends AppCompatActivity {
+// Define the topic 4 class that extends AppCompatActivity.
+public class topic4screen extends AppCompatActivity {
     // Declare a button named back to return.
     Button back;
 
@@ -20,9 +20,9 @@ public class tema5 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         // Call the superclass constructor.
         super.onCreate(savedInstanceState);
-        // Set the layout for the activity to 'activity_tema5'.
+        // Set the layout for the activity to 'activity_tema4'.
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_tema5);
+        setContentView(R.layout.activity_tema4);
 
         // Set a listener to apply window insets correctly.
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
