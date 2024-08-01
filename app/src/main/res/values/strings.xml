@@ -10,4 +10,6 @@
     <string name="menu">Menu</string>
     <string name="hola">Hola</string>
     <string name="adios">Adios</string>
+    <string name="Instruction_1_1">"Instrucción</string>
+
 </resources>

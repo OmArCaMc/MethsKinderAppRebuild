@@ -34,7 +34,11 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, SelectOption.class);
-//                intent.putExtra("INSTRUCTION", "@drawable/start_bg");
+                intent.putExtra("INSTRUCTION", R.string.Instruction_1_1);
+                intent.putExtra("ILLUSTRATION", R.drawable.illustration_1_1);
+                intent.putExtra("OP1", R.drawable.bird);
+                intent.putExtra("OP2", R.drawable.bunny);
+                intent.putExtra("OP3", R.drawable.lion);
                 startActivity(intent);
             }
         });
