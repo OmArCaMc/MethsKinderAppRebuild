@@ -20,6 +20,9 @@ public class draggableImage extends AppCompatActivity {
     ImageView draggableImage;
     ImageView fixedImage;
 
+    // Declare button
+    Button back;
+
     @Override
     // Method called when the activity is first created
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +38,19 @@ public class draggableImage extends AppCompatActivity {
                     insets.getInsets(WindowInsetsCompat.Type.systemBars()).right,
                     insets.getInsets(WindowInsetsCompat.Type.systemBars()).bottom);
             return insets;
+        });
+
+        // Assign the button 'backBttn' to the variable 'back'.
+        back = (Button) findViewById(R.id.backBttn);
+        // Set a listener for the click event of the 'back' button.
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+
+            // Method called when the button is clicked.
+            public void onClick(View v) {
+                // Finish the current activity and go back to the previous activity.
+                finish();
+            }
         });
 
         // Initialize the images

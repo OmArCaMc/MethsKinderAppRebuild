@@ -15,6 +15,7 @@ import androidx.core.view.WindowInsetsCompat;
 public class topic1screen extends AppCompatActivity {
     // Declare a button named back to return.
     Button back;
+    Button question1;
 
     @Override
     // Method called when the activity is first created.
@@ -34,7 +35,6 @@ public class topic1screen extends AppCompatActivity {
 
         // Assign the button 'backBttn' to the variable 'back'.
         back = (Button) findViewById(R.id.backBttn);
-
         // Set a listener for the click event of the 'back' button.
         back.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -43,6 +43,17 @@ public class topic1screen extends AppCompatActivity {
             public void onClick(View v) {
                 // Finish the current activity and go back to the previous activity.
                 finish();
+            }
+        });
+
+        // Assign question1 button
+        question1 = (Button) findViewById(R.id.Question1);
+        // Set listener
+        question1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(topic1screen.this, draggableImage.class);
+                startActivity(intent);
             }
         });
     }
