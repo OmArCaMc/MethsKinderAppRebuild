@@ -14,10 +14,11 @@ import com.example.animate.databinding.ActivitySelectOptionBinding;
 
 public class SelectOption extends AppCompatActivity {
 
+    private int rightOp;
+
     @Override protected void onCreate(Bundle savedInstance){
         super.onCreate(savedInstance);
         DataSelectOption dataSelectOption = new DataSelectOption();
-
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
         ActivitySelectOptionBinding binding = DataBindingUtil.setContentView(this, R.layout.activity_select_option);
         binding.setLifecycleOwner(this);
@@ -30,8 +31,7 @@ public class SelectOption extends AppCompatActivity {
             setOp1(intent.getIntExtra("OP1", 0));
             setOp2(intent.getIntExtra("OP2", 0));
             setOp3(intent.getIntExtra("OP3", 0));
-            dataSelectOption.instruction.set(intent.getIntExtra("INSTRUCTION", 0));
-            dataSelectOption.pathIllustration.set(intent.getIntExtra("PATH_ILLUSTRATION", 0));
+            setRightOp(intent.getIntExtra("RightOP",0));
         }
         binding.setData(dataSelectOption);
     }
@@ -55,6 +55,10 @@ public class SelectOption extends AppCompatActivity {
         ImageView imageView = findViewById(R.id.op3);
         imageView.setImageResource(resourceId);
     }
+    public void setRightOp(int _rightOp){
+        this.rightOp = _rightOp;
+    }
+
     private void setOnClickListeners(){
         ImageButton op1 = findViewById(R.id.op1);
         ImageButton op2 = findViewById(R.id.op2);
