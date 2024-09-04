@@ -3,6 +3,8 @@ package com.example.animate;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -53,4 +55,32 @@ public class SelectOption extends AppCompatActivity {
         ImageView imageView = findViewById(R.id.op3);
         imageView.setImageResource(resourceId);
     }
+    private void setOnClickListeners(){
+        ImageButton op1 = findViewById(R.id.op1);
+        ImageButton op2 = findViewById(R.id.op2);
+        ImageButton op3 = findViewById(R.id.op3);
+
+        op1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                optionClicked(1);
+            }
+        });
+        op2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                optionClicked(2);
+            }
+        });
+        op3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                optionClicked(3);
+            }
+        });
+    }
+    private void optionClicked(int optionClicked){
+
+    }
+
 }
