@@ -12,10 +12,9 @@
         android:id="@+id/Tema1"
         android:layout_width="@dimen/_94sdp"
         android:layout_height="@dimen/_90sdp"
-        android:background="@android:color/transparent"
         android:layout_marginStart="@dimen/_54sdp"
         android:layout_marginTop="@dimen/_100sdp"
-        android:layout_marginBottom="0dp"
+        android:background="@android:color/transparent"
         app:layout_constraintBottom_toTopOf="@+id/Tema5"
         app:layout_constraintEnd_toStartOf="@+id/Tema2"
         app:layout_constraintStart_toStartOf="parent"
@@ -37,11 +36,11 @@
         android:id="@+id/Tema3"
         android:layout_width="@dimen/_94sdp"
         android:layout_height="@dimen/_90sdp"
-        android:background="@android:color/transparent"
         android:layout_marginTop="@dimen/_82sdp"
-        app:layout_constraintStart_toEndOf="@id/Tema2"
-        app:layout_constraintEnd_toStartOf="@+id/Tema4"
+        android:background="@android:color/transparent"
         app:layout_constraintBottom_toTopOf="@id/Tema6"
+        app:layout_constraintEnd_toStartOf="@+id/Tema4"
+        app:layout_constraintStart_toEndOf="@id/Tema2"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
