@@ -22,7 +22,7 @@ public class topic7screen extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         // Set the layout for the activity to 'activity_tema7'.
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_tema1);
+        setContentView(R.layout.activity_tema7);
 
         // Set a listener to apply window insets correctly.
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
