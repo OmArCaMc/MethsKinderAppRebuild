@@ -54,8 +54,8 @@ public class draggableImage extends AppCompatActivity {
         });
 
         // Initialize the images
-        draggableImage = findViewById(R.id.Mono);
-        fixedImage = findViewById(R.id.Panda);
+        draggableImage = findViewById(R.id.monkey_asset);
+        fixedImage = findViewById(R.id.generic_tree_asset_1);
 
         // Set up dragging for the draggable image
         setDraggable(draggableImage);
