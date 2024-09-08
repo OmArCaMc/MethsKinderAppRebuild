@@ -16,6 +16,7 @@ public class topic1screen extends AppCompatActivity {
     // Declare a button named back to return.
     Button back;
     Button question1;
+    Button question2;
 
     @Override
     // Method called when the activity is first created.
@@ -47,12 +48,21 @@ public class topic1screen extends AppCompatActivity {
         });
 
         // Assign question1 button
-        question1 = (Button) findViewById(R.id.Question1);
+        question1 = (Button) findViewById(R.id.question1);
         // Set listener
         question1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(topic1screen.this, draggableImage.class);
+                startActivity(intent);
+            }
+        });
+
+        question2 = (Button) findViewById(R.id.question2);
+        question2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(topic1screen.this, dragMultipleImages.class);
                 startActivity(intent);
             }
         });
