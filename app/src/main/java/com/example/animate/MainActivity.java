@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
                 intent.putExtra("OP1", R.drawable.bird);
                 intent.putExtra("OP2", R.drawable.bunny);
                 intent.putExtra("OP3", R.drawable.lion);
-                intent.putExtra("RightOp", 1);
+                intent.putExtra("RightOp", (1));
                 startActivity(intent);
             }
         });

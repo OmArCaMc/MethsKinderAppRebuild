@@ -3,6 +3,8 @@ package com.example.animate;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Looper;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
@@ -15,6 +17,7 @@ import com.example.animate.databinding.ActivitySelectOptionBinding;
 public class SelectOption extends AppCompatActivity {
 
     private int rightOp;
+    private Handler pauseHandler;
 
     @Override protected void onCreate(Bundle savedInstance){
         super.onCreate(savedInstance);
@@ -31,9 +34,10 @@ public class SelectOption extends AppCompatActivity {
             setOp1(intent.getIntExtra("OP1", 0));
             setOp2(intent.getIntExtra("OP2", 0));
             setOp3(intent.getIntExtra("OP3", 0));
-            setRightOp(intent.getIntExtra("RightOP",0));
+            setRightOp(intent.getIntExtra("RightOp",0));
         }
-        binding.setData(dataSelectOption);
+        setOnClickListeners();
+        this.pauseHandler = new Handler(Looper.getMainLooper());
     }
     public void setIllustration(int resourceId){
         ImageView illustrationView = findViewById(R.id.illustration);
@@ -55,8 +59,8 @@ public class SelectOption extends AppCompatActivity {
         ImageView imageView = findViewById(R.id.op3);
         imageView.setImageResource(resourceId);
     }
-    public void setRightOp(int _rightOp){
-        this.rightOp = _rightOp;
+    public void setRightOp(int rightOp){
+        this.rightOp = rightOp;
     }
 
     private void setOnClickListeners(){
@@ -84,7 +88,19 @@ public class SelectOption extends AppCompatActivity {
         });
     }
     private void optionClicked(int optionClicked){
+        TextView feedback = findViewById(R.id.feedback);
 
+        if (optionClicked == this.rightOp){
+            feedback.setText(R.string.feedback_correct);
+        } else {
+            feedback.setText(R.string.feedback_incorrect);
+        }
+        this.pauseHandler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                feedback.setText("");
+            }
+        }, 3000);
     }
 
 }
