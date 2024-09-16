@@ -28,6 +28,8 @@ public class draggableImage extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         // Call the superclass constructor.
         super.onCreate(savedInstanceState);
+        // Expand to all screen
+        EdgeToEdge.enable(this);
         // Set the layout for the activity to 'activity_draggableimage'.
         setContentView(R.layout.activity_draggableimage);
 

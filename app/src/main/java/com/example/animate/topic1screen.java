@@ -16,6 +16,7 @@ public class topic1screen extends AppCompatActivity {
     // Declare a button named back to return.
     Button back;
     Button question1;
+    Button question2;
 
     @Override
     // Method called when the activity is first created.
@@ -56,5 +57,17 @@ public class topic1screen extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        // Assign question2 button
+        question2 = (Button) findViewById(R.id.Question2);
+        // Set listener
+        question2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(topic1screen.this, matchingActivity.class);
+                startActivity(intent);
+            }
+        });
+
     }
 }
