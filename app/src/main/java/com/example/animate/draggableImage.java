@@ -6,6 +6,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 
+import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
@@ -13,14 +14,11 @@ import androidx.core.view.WindowInsetsCompat;
 import android.view.MotionEvent;
 
 public class draggableImage extends AppCompatActivity {
-    // Declare images
     ImageView draggableImage;
     ImageView fixedImage;
-    // Declare button
     Button back;
 
     @Override
-    // Method called when the activity is first created
     protected void onCreate(Bundle savedInstanceState) {
         // Call the superclass constructor.
         super.onCreate(savedInstanceState);
@@ -38,13 +36,9 @@ public class draggableImage extends AppCompatActivity {
             return insets;
         });
 
-        // Assign the button 'backBttn' to the variable 'back'.
         back = findViewById(R.id.backBttn);
-        // Set a listener for the click event of the 'back' button.
         back.setOnClickListener(new View.OnClickListener() {
             @Override
-
-            // Method called when the button is clicked.
             public void onClick(View v) {
                 // Finish the current activity and go back to the previous activity.
                 finish();
