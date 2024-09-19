@@ -2,6 +2,7 @@ package com.example.animate;
 
 import android.annotation.SuppressLint;
 import android.os.Bundle;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -10,24 +11,23 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-import android.view.MotionEvent;
-
-public class draggableImage extends AppCompatActivity {
-    // Declare images
-    ImageView draggableImage;
-    ImageView fixedImage;
-    // Declare button
+public class dragMultipleImages extends AppCompatActivity {
+    // Declare attributes / assets
+    ImageView monkey;
+    ImageView monkey2;
+    ImageView panda;
+    ImageView bear;
+    ImageView tucan;
+    ImageView bird;
+    ImageView frame1;
+    ImageView frame2;
+    ImageView frame3;
     Button back;
 
     @Override
-    // Method called when the activity is first created
     protected void onCreate(Bundle savedInstanceState) {
-        // Call the superclass constructor.
         super.onCreate(savedInstanceState);
-        // Expand to all screen
-        EdgeToEdge.enable(this);
-        // Set the layout for the activity to 'activity_draggableimage'.
-        setContentView(R.layout.activity_draggableimage);
+        setContentView(R.layout.activity_drag_multiple_images);
 
         // Handle window insets as before
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
@@ -38,25 +38,30 @@ public class draggableImage extends AppCompatActivity {
             return insets;
         });
 
-        // Assign the button 'backBttn' to the variable 'back'.
         back = findViewById(R.id.backBttn);
-        // Set a listener for the click event of the 'back' button.
         back.setOnClickListener(new View.OnClickListener() {
             @Override
-
-            // Method called when the button is clicked.
             public void onClick(View v) {
                 // Finish the current activity and go back to the previous activity.
                 finish();
             }
         });
 
-        // Initialize the images
-        draggableImage = findViewById(R.id.monkey_asset);
-        fixedImage = findViewById(R.id.generic_tree_asset_1);
+//        frame1 = findViewById(R.id.frame1_asset);
+//        frame2 = findViewById(R.id.frame2_asset);
+//        frame3 = findViewById(R.id.frame3_asset);
+
+        monkey = findViewById(R.id.monkey_asset);
+        monkey2 = findViewById(R.id.monkey2_asset);
+        panda = findViewById(R.id.panda_asset);
+        bear = findViewById(R.id.bear_asset);
+        tucan = findViewById(R.id.tucan_asset);
+        bird = findViewById(R.id.bird_asset);
 
         // Set up dragging for the draggable image
-        setDraggable(draggableImage);
+        setDraggable(monkey); setDraggable(monkey2);
+        setDraggable(panda); setDraggable(bear);
+        setDraggable(tucan); setDraggable(bird);
     }
 
     @SuppressLint("ClickableViewAccessibility")
