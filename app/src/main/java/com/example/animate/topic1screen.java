@@ -11,13 +11,13 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-// Define the topic 1 class that extends AppCompatActivity.
 public class topic1screen extends AppCompatActivity {
-    // Declare a button named back to return.
     Button back;
+    Button question1;
+    Button question2;
+    Button question3;
 
     @Override
-    // Method called when the activity is first created.
     protected void onCreate(Bundle savedInstanceState) {
         // Call the superclass constructor.
         super.onCreate(savedInstanceState);
@@ -32,17 +32,39 @@ public class topic1screen extends AppCompatActivity {
             return insets;
         });
 
-        // Assign the button 'backBttn' to the variable 'back'.
         back = (Button) findViewById(R.id.backBttn);
-
-        // Set a listener for the click event of the 'back' button.
         back.setOnClickListener(new View.OnClickListener() {
             @Override
-
-            // Method called when the button is clicked.
             public void onClick(View v) {
                 // Finish the current activity and go back to the previous activity.
                 finish();
+            }
+        });
+
+        question1 = (Button) findViewById(R.id.question1);
+        question1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(topic1screen.this, draggableImage.class);
+                startActivity(intent);
+            }
+        });
+
+        question2 = (Button) findViewById(R.id.question2);
+        question2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(topic1screen.this, dragMultipleImages.class);
+                startActivity(intent);
+            }
+        });
+
+        question3 = (Button) findViewById(R.id.question3);
+        question3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(topic1screen.this, matchingActivity.class);
+                startActivity(intent);
             }
         });
     }

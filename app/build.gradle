@@ -6,9 +6,6 @@ android {
     namespace 'com.example.animate'
     compileSdk 34
 
-    buildFeatures{
-        dataBinding = true
-    }
 
     defaultConfig {
         applicationId "com.example.animate"
@@ -30,6 +27,10 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+    buildFeatures {
+        viewBinding true
+        dataBinding true
+    }
 }
 
 dependencies {
@@ -39,6 +40,8 @@ dependencies {
     implementation libs.activity
     implementation libs.constraintlayout
     implementation libs.gridlayout
+    implementation libs.navigation.fragment
+    implementation libs.navigation.ui
     testImplementation libs.junit
     androidTestImplementation libs.ext.junit
     androidTestImplementation libs.espresso.core
@@ -47,7 +50,7 @@ dependencies {
     implementation libs.sdp.android
     // For SSP, use this:
     implementation libs.ssp.android
-    
+
     // For image loading
     implementation libs.appcompat.v130
     implementation libs.glide
