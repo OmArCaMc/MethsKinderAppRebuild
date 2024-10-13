@@ -86,8 +86,11 @@ public class dragMultipleImages extends AppCompatActivity {
                         break;
 
                     case MotionEvent.ACTION_UP:
-                        if (lastAction == MotionEvent.ACTION_DOWN)
+                        if (lastAction == MotionEvent.ACTION_DOWN) {
                             v.performClick();
+                        } else{
+
+                        }
                         break;
 
                     default:

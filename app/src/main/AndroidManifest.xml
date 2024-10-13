@@ -19,6 +19,8 @@
         <activity
             android:name=".dragMultipleImages"
             android:exported="false" />
+        <activity android:name=".dragMultipleImagesMod"
+            android:exported="false" />
         <activity
             android:name=".draggableImage"
             android:exported="false" />

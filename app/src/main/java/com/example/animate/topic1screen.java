@@ -45,7 +45,14 @@ public class topic1screen extends AppCompatActivity {
         question1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(topic1screen.this, draggableImage.class);
+                Intent intent = new Intent(topic1screen.this, dragMultipleImagesMod.class);
+                intent.putExtra("DRAGGABLE0", R.drawable.bear_asset);
+                intent.putExtra("FRAME0", R.drawable.generic_tree_asset_1);
+                intent.putExtra("DRAGGABLE1", R.drawable.bunny);
+                intent.putExtra("FRAME1", R.drawable.bunny);
+                intent.putExtra("DRAGGABLE2", R.drawable.lion);
+                intent.putExtra("FRAME2", R.drawable.lion);
+                intent.putExtra("INSTRUCTION", "Instruccion radical");
                 startActivity(intent);
             }
         });

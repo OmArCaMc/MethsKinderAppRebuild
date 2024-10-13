@@ -12,6 +12,7 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
+
 import com.example.animate.databinding.ActivitySelectOptionBinding;
 
 public class SelectOption extends AppCompatActivity {
