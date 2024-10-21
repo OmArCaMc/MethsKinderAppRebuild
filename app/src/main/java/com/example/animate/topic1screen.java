@@ -16,6 +16,8 @@ public class topic1screen extends AppCompatActivity {
     Button question1;
     Button question2;
     Button question3;
+    Button question4;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -71,6 +73,23 @@ public class topic1screen extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(topic1screen.this, matchingActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        question4 = (Button) findViewById(R.id.question4);
+        question4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(topic1screen.this, SelectOption.class);
+
+                intent.putExtra("INSTRUCTION", "Elige la imagen que mejor representa a un animal carnívoro");
+                intent.putExtra("ILLUSTRATION", R.drawable.monkey2_asset);
+                intent.putExtra("OP1", R.drawable.monkey2_asset);
+                intent.putExtra("OP2", R.drawable.lion);
+                intent.putExtra("OP3", R.drawable.tucan_asset);
+                intent.putExtra("RightOp", 1); // Establece la opción correcta (ej. 1)
+
                 startActivity(intent);
             }
         });
