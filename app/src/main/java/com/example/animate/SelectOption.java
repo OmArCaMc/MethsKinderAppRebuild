@@ -12,6 +12,7 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
+import androidx.databinding.ViewDataBinding;
 
 import com.example.animate.databinding.ActivitySelectOptionBinding;
 
@@ -24,8 +25,9 @@ public class SelectOption extends AppCompatActivity {
         super.onCreate(savedInstance);
         DataSelectOption dataSelectOption = new DataSelectOption();
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
-        ActivitySelectOptionBinding binding = DataBindingUtil.setContentView(this, R.layout.activity_select_option);
-        binding.setLifecycleOwner(this);
+//        ViewDataBinding binding = DataBindingUtil.setContentView(this, R.layout.activity_select_option);
+        setContentView(R.layout.activity_select_option);
+//        binding.setLifecycleOwner(this);
 
         Intent intent = getIntent();
         if (intent != null) {
@@ -89,7 +91,7 @@ public class SelectOption extends AppCompatActivity {
         });
     }
     private void optionClicked(int optionClicked){
-        TextView feedback = findViewById(R.id.feedback);
+        TextView feedback = findViewById(R.id.feedBack);
 
         if (optionClicked == this.rightOp){
             feedback.setText(R.string.feedback_correct);

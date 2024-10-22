@@ -83,7 +83,7 @@ public class topic1screen extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(topic1screen.this, SelectOption.class);
 
-                intent.putExtra("INSTRUCTION", "Elige la imagen que mejor representa a un animal carnívoro");
+                intent.putExtra("INSTRUCTION", R.string.Instruction_1_1);
                 intent.putExtra("ILLUSTRATION", R.drawable.monkey2_asset);
                 intent.putExtra("OP1", R.drawable.monkey2_asset);
                 intent.putExtra("OP2", R.drawable.lion);
