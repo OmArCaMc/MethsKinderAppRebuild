@@ -10,6 +10,7 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
@@ -26,6 +27,9 @@ public class SelectOption extends AppCompatActivity {
         DataSelectOption dataSelectOption = new DataSelectOption();
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
 //        ViewDataBinding binding = DataBindingUtil.setContentView(this, R.layout.activity_select_option);
+
+        // Expand to all screen
+        EdgeToEdge.enable(this);
         setContentView(R.layout.activity_select_option);
 //        binding.setLifecycleOwner(this);
 

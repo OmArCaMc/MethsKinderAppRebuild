@@ -86,7 +86,7 @@ public class topic1screen extends AppCompatActivity {
                 intent.putExtra("INSTRUCTION", R.string.Instruction_1_1);
                 intent.putExtra("ILLUSTRATION", R.drawable.monkey2_asset);
                 intent.putExtra("OP1", R.drawable.monkey2_asset);
-                intent.putExtra("OP2", R.drawable.lion);
+                intent.putExtra("OP2", R.drawable.bird_asset);
                 intent.putExtra("OP3", R.drawable.tucan_asset);
                 intent.putExtra("RightOp", 1); // Establece la opción correcta (ej. 1)
 
