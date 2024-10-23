@@ -44,11 +44,16 @@ public class SelectOption extends AppCompatActivity {
             setOp2(intent.getIntExtra("OP2", 0));
             setOp3(intent.getIntExtra("OP3", 0));
             setRightOp(intent.getIntExtra("RightOp",0));
+            setBackButtonImage(intent.getIntExtra("BACK_BUTTON_IMAGE", 0));
         }
         setOnClickListeners();
         setBackListener();
 
         this.pauseHandler = new Handler(Looper.getMainLooper());
+    }
+    private void setBackButtonImage(int resourceId) {
+        Button back = findViewById(R.id.backBttn);
+        back.setBackgroundResource(resourceId);
     }
     public void setIllustration(int resourceId){
         ImageView illustrationView = findViewById(R.id.illustration);

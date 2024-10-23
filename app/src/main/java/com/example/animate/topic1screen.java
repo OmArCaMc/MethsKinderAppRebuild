@@ -90,6 +90,9 @@ public class topic1screen extends AppCompatActivity {
                 intent.putExtra("OP3", R.drawable.tucan_asset);
                 intent.putExtra("RightOp", 1); // Establece la opción correcta (ej. 1)
 
+                intent.putExtra("BACK_BUTTON_IMAGE", R.drawable.back_topic1_4_asset);
+
+
                 startActivity(intent);
             }
         });
