@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -19,6 +20,7 @@ import com.example.animate.databinding.ActivitySelectOptionBinding;
 
 public class SelectOption extends AppCompatActivity {
 
+    Button back;
     private int rightOp;
     private Handler pauseHandler;
 
@@ -44,6 +46,8 @@ public class SelectOption extends AppCompatActivity {
             setRightOp(intent.getIntExtra("RightOp",0));
         }
         setOnClickListeners();
+        setBackListener();
+
         this.pauseHandler = new Handler(Looper.getMainLooper());
     }
     public void setIllustration(int resourceId){
@@ -94,6 +98,18 @@ public class SelectOption extends AppCompatActivity {
             }
         });
     }
+
+    private void setBackListener(){
+        back = findViewById(R.id.backBttn);
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Finish the current activity and go back to the previous activity.
+                finish();
+            }
+        });
+    }
+
     private void optionClicked(int optionClicked){
         TextView feedback = findViewById(R.id.feedBack);
 
