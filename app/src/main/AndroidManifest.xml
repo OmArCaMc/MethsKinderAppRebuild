@@ -14,7 +14,7 @@
         android:theme="@style/Theme.AniMate"
         tools:targetApi="31">
         <activity
-            android:name=".matchingActivity"
+            android:name=".matchingActivityNoMod"
             android:exported="false" />
         <activity
             android:name=".dragMultipleImages"
@@ -48,7 +48,7 @@
         <activity
             android:name=".menu"
             android:exported="false" />
-        <activity android:name=".SelectOption"
+        <activity android:name=".SelectOptionMod"
             android:exported="false" />
         <activity
             android:name=".startActivity"

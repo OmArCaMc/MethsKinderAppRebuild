@@ -18,7 +18,7 @@ import androidx.databinding.ViewDataBinding;
 
 import com.example.animate.databinding.ActivitySelectOptionBinding;
 
-public class SelectOption extends AppCompatActivity {
+public class SelectOptionMod extends AppCompatActivity {
 
     Button back;
     private int rightOp;

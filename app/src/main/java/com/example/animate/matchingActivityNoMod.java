@@ -15,7 +15,7 @@ import java.util.ArrayList;
 import java.util.Random;
 import androidx.activity.EdgeToEdge;
 
-public class matchingActivity extends AppCompatActivity {
+public class matchingActivityNoMod extends AppCompatActivity {
     // Declare button
     Button back,clear;
     private DrawView drawView;
@@ -49,7 +49,7 @@ public class matchingActivity extends AppCompatActivity {
         private Path path = new Path();
         private ArrayList<Line> lines = new ArrayList<>();  // Store all lines
 
-        public DrawView(matchingActivity context) {
+        public DrawView(matchingActivityNoMod context) {
             super(context);
             paint.setStrokeWidth(10f);
             paint.setStyle(Paint.Style.STROKE);

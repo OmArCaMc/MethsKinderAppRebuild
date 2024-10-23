@@ -17,6 +17,7 @@ public class topic1screen extends AppCompatActivity {
     Button question2;
     Button question3;
     Button question4;
+    Button question5;
 
 
     @Override
@@ -74,7 +75,7 @@ public class topic1screen extends AppCompatActivity {
         question3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(topic1screen.this, matchingActivity.class);
+                Intent intent = new Intent(topic1screen.this, matchingActivityNoMod.class);
                 startActivity(intent);
             }
         });
@@ -83,7 +84,7 @@ public class topic1screen extends AppCompatActivity {
         question4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(topic1screen.this, SelectOption.class);
+                Intent intent = new Intent(topic1screen.this, SelectOptionMod.class);
 
                 intent.putExtra("INSTRUCTION", R.string.Instruction_1_1);
                 intent.putExtra("ILLUSTRATION", R.drawable.monkey2_asset);
@@ -94,6 +95,15 @@ public class topic1screen extends AppCompatActivity {
                 intent.putExtra("BACK_BUTTON_IMAGE", R.drawable.back_topic1_4_asset);
 
 
+                startActivity(intent);
+            }
+        });
+
+        question5 = (Button) findViewById(R.id.question5);
+        question5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(topic1screen.this, draggableImage.class);
                 startActivity(intent);
             }
         });
