@@ -57,7 +57,6 @@ public class dragMultipleImagesMod extends AppCompatActivity {
         setBackListener();
         setViews();
 
-
         generateLayout();
         setCheckListener();
         this.pauseHandler = new Handler(Looper.getMainLooper());
@@ -103,15 +102,13 @@ public class dragMultipleImagesMod extends AppCompatActivity {
             correlations[1][2] = intent.getIntExtra("FRAME2", 0);
         }
     }
-    private void setBackListener(){
+
+    private void setBackListener() {
         back = findViewById(R.id.backBttn);
-        back.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // Finish the current activity and go back to the previous activity.
-                finish();
-            }
-        });
+        Intent intent = getIntent();
+        int backButtonImage = intent.getIntExtra("BACK_BUTTON_IMAGE", 0);
+        back.setBackgroundResource(backButtonImage);
+        back.setOnClickListener(v -> finish());
     }
 
     private void setInstruction(){

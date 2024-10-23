@@ -55,6 +55,8 @@ public class topic1screen extends AppCompatActivity {
                 intent.putExtra("DRAGGABLE2", R.drawable.lion);
                 intent.putExtra("FRAME2", R.drawable.lion);
                 intent.putExtra("INSTRUCTION", "Instruccion radical");
+                intent.putExtra("BACK_BUTTON_IMAGE", R.drawable.back_topic1_4_asset);
+
                 startActivity(intent);
             }
         });
@@ -89,7 +91,6 @@ public class topic1screen extends AppCompatActivity {
                 intent.putExtra("OP2", R.drawable.bird_asset);
                 intent.putExtra("OP3", R.drawable.tucan_asset);
                 intent.putExtra("RightOp", 1); // Establece la opción correcta (ej. 1)
-
                 intent.putExtra("BACK_BUTTON_IMAGE", R.drawable.back_topic1_4_asset);
 
 
