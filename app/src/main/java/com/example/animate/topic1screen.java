@@ -2,6 +2,7 @@ package com.example.animate;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
@@ -104,6 +105,11 @@ public class topic1screen extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(topic1screen.this, draggableImage.class);
+
+                intent.putExtra("DRAGGABLE0", R.drawable.monkey_asset);
+                intent.putExtra("FIXED0", R.drawable.generic_tree_asset_1);
+                intent.putExtra("INSTRUCTION", "Instruccion radical");
+                intent.putExtra("BACK_BUTTON_IMAGE", R.drawable.back_topic1_4_asset);
                 startActivity(intent);
             }
         });
