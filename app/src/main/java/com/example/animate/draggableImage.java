@@ -25,6 +25,7 @@ public class draggableImage extends AppCompatActivity {
     ImageView fixedImage;
     Button back;
     Button check;
+    String expectedPosition;
 
     private int[][] correlations;
     private int[][] positions;
@@ -48,21 +49,13 @@ public class draggableImage extends AppCompatActivity {
                     insets.getInsets(WindowInsetsCompat.Type.systemBars()).bottom);
             return insets;
         });
-        Log.d("TAG", "Correlations");
         setCorrelations();
-        Log.d("TAG", "Instruccion");
         setInstruction();
-        Log.d("TAG", "BackListener");
         setBackListener();
-        Log.d("TAG", "Views");
         setViews();
-        Log.d("TAG", "Layuot");
         generateLayout();
-        Log.d("TAG", "CheckListener");
         setCheckListener();
-        Log.d("TAG", "Termino CheckListener");
         this.pauseHandler = new Handler(Looper.getMainLooper());
-        Log.d("TAG", "Fin de onCreate");
     }
 
     private void setCorrelations() {
@@ -71,6 +64,7 @@ public class draggableImage extends AppCompatActivity {
             correlations = new int[2][1];
             correlations[0][0] = intent.getIntExtra("DRAGGABLE0", 0);
             correlations[1][0] = intent.getIntExtra("FIXED0", 0);
+            expectedPosition = intent.getStringExtra("EXPECTED_POSITION");
         }
     }
 
@@ -108,10 +102,38 @@ public class draggableImage extends AppCompatActivity {
     }
 
     private boolean checkAnswers(){
-        // TODO: Revisar posicion de imagen segun corresponda
-        // Podria haber una variable que indique la posicion en la que
-        // debe quedar la imagen arrastrable con respecto a la otra
-        return true;
+        if (expectedPosition == null) return false;
+
+        // Get positions of the images
+        float draggableX = draggableImage.getX();
+        float draggableY = draggableImage.getY();
+        float fixedX = fixedImage.getX();
+        float fixedY = fixedImage.getY();
+
+        // Tolerance for slight position difference
+        final float tolerance = 50.0f;
+
+        // Check based on expected position
+        switch (expectedPosition) {
+            case "above":
+                // Check if the draggable image is completely above the fixed image
+                Log.d("TAG", ""+fixedY + fixedImage.getHeight()+" < "+draggableY);
+                return fixedY + fixedImage.getHeight() < draggableY;
+            case "below":
+                // Check if the draggable image is completely below the fixed image
+                Log.d("TAG", ""+fixedY+" > "+draggableY + draggableImage.getHeight());
+                return fixedY > draggableY + draggableImage.getHeight();
+            case "left":
+                // Check if the draggable image is completely left of the fixed image
+                Log.d("TAG", ""+fixedX+" > "+draggableX + draggableImage.getWidth());
+                return fixedX > draggableX + draggableImage.getWidth();
+            case "right":
+                // Check if the draggable image is completely right of the fixed image
+                Log.d("TAG", ""+fixedX + fixedImage.getWidth()+" < "+draggableX);
+                return fixedX + fixedImage.getWidth() < draggableX;
+            default:
+                return false;
+        }
     }
 
     private void answersAreCorrect(){
@@ -143,10 +165,12 @@ public class draggableImage extends AppCompatActivity {
         draggable.setImageResource(correlations[0][0]);
         correlations[0][0] = views[0][0];
         setDraggable(draggable);
+        this.draggableImage = draggable;
 
         ImageView frame = findViewById(views[1][0]);
         frame.setImageResource(correlations[1][0]);
         correlations[1][0] = views[1][0];
+        this.fixedImage = frame;
     }
 
     @SuppressLint("ClickableViewAccessibility")
