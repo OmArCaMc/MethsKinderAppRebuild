@@ -8,6 +8,10 @@ import android.graphics.Path;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.TextView;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
@@ -17,7 +21,7 @@ import androidx.activity.EdgeToEdge;
 
 public class matchingActivityNoMod extends AppCompatActivity {
     // Declare button
-    Button back,clear;
+    Button back,clear,check;
     private DrawView drawView;
 
     @Override
@@ -35,6 +39,10 @@ public class matchingActivityNoMod extends AppCompatActivity {
         // Back button functionality
         back = findViewById(R.id.backBttn);
         back.setOnClickListener(v -> finish());
+
+        // Back button functionality
+        check = findViewById(R.id.checkBttn);
+        check.setOnClickListener(v -> showFeedbackAnimation(true, "Por favor, dile al profesor que le eche un vistazo"));
 
         // Set up the custom clean button
         clear  = findViewById(R.id.cleanBttn);
@@ -116,4 +124,37 @@ public class matchingActivityNoMod extends AppCompatActivity {
             this.color = color;
         }
     }
+
+    private void showFeedbackAnimation(boolean isCorrect, String feedbackMessage) {
+        // Get the views
+        LinearLayout feedbackLayout = findViewById(R.id.feedbackLayout);
+        ImageView feedbackImage = findViewById(R.id.feedbackImage);
+        TextView feedbackText = findViewById(R.id.feedbackText);
+
+        // Set the emoji and feedback text (here we have just a ? emoji)
+        feedbackImage.setImageResource(isCorrect ? R.drawable.generic_thoughtful_emoji : R.drawable.generic_thoughtful_emoji);
+        feedbackText.setText(feedbackMessage);
+
+        // Show the view of feedback and set initial position out of screen
+        feedbackLayout.setVisibility(View.VISIBLE);
+        feedbackLayout.setTranslationY(-feedbackLayout.getHeight());
+
+        // Down animation
+        feedbackLayout.animate()
+                .translationY(0)
+                .setDuration(500)
+                .withEndAction(() -> {
+                    // Wait 3 seconds and then hide the feedback
+                    feedbackLayout.postDelayed(() -> {
+                        feedbackLayout.animate()
+                                .translationY(-feedbackLayout.getHeight())
+                                .setDuration(500)
+                                .withEndAction(() -> feedbackLayout.setVisibility(View.GONE))
+                                .start();
+                    }, 3000);
+                })
+                .start();
+    }
+
+
 }
