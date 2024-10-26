@@ -101,7 +101,7 @@ public class draggableImage extends AppCompatActivity {
         });
     }
 
-    private boolean checkAnswers(){
+    private boolean checkAnswers() {
         if (expectedPosition == null) return false;
 
         // Get positions of the images
@@ -110,6 +110,10 @@ public class draggableImage extends AppCompatActivity {
         float fixedX = fixedImage.getX();
         float fixedY = fixedImage.getY();
 
+        // Calculate center positions
+        float draggableCenterY = draggableY + (draggableImage.getHeight() / 2);
+        float fixedCenterY = fixedY + (fixedImage.getHeight() / 2);
+
         // Tolerance for slight position difference
         final float tolerance = 50.0f;
 
@@ -117,20 +121,20 @@ public class draggableImage extends AppCompatActivity {
         switch (expectedPosition) {
             case "above":
                 // Check if the draggable image is completely above the fixed image
-                Log.d("TAG", ""+fixedY + fixedImage.getHeight()+" < "+draggableY);
-                return fixedY + fixedImage.getHeight() < draggableY;
+                Log.d("TAG", "Above Check: " + (draggableY + draggableImage.getHeight() - tolerance) + " < " + fixedY);
+                return (draggableY + draggableImage.getHeight() - tolerance) < fixedY;
             case "below":
                 // Check if the draggable image is completely below the fixed image
-                Log.d("TAG", ""+fixedY+" > "+draggableY + draggableImage.getHeight());
-                return fixedY > draggableY + draggableImage.getHeight();
+                Log.d("TAG", "Below Check: " + draggableCenterY + " > " + (fixedCenterY + tolerance));
+                return draggableCenterY > (fixedCenterY + tolerance);
             case "left":
                 // Check if the draggable image is completely left of the fixed image
-                Log.d("TAG", ""+fixedX+" > "+draggableX + draggableImage.getWidth());
-                return fixedX > draggableX + draggableImage.getWidth();
+                Log.d("TAG", "Left Check: " + fixedX + " > " + (draggableX + draggableImage.getWidth() - tolerance));
+                return fixedX > (draggableX + draggableImage.getWidth() - tolerance);
             case "right":
                 // Check if the draggable image is completely right of the fixed image
-                Log.d("TAG", ""+fixedX + fixedImage.getWidth()+" < "+draggableX);
-                return fixedX + fixedImage.getWidth() < draggableX;
+                Log.d("TAG", "Right Check: " + (fixedX + fixedImage.getWidth() + tolerance) + " < " + draggableX);
+                return (fixedX + fixedImage.getWidth() + tolerance) < draggableX;
             default:
                 return false;
         }
