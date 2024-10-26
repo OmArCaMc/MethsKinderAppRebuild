@@ -109,6 +109,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="sans-serif"
+        android:textSize="15sp"
+        android:textColor="@android:color/black"
         android:text="Reune cada grupo de monitos con su grupo de bananas ideal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

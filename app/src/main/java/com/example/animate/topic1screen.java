@@ -56,7 +56,7 @@ public class topic1screen extends AppCompatActivity {
                 intent.putExtra("FRAME1", R.drawable.generic_egg1_asset);
                 intent.putExtra("DRAGGABLE2", R.drawable.generic_squirrel_asset);
                 intent.putExtra("FRAME2", R.drawable.generic_tree_asset_1);
-                intent.putExtra("INSTRUCTION", "Relaciona los animales (quemada,TODO:arreglar)");
+                intent.putExtra("INSTRUCTION", "Relaciona los animales (Instruccion quemada,TODO:arreglar)");
                 intent.putExtra("BACK_BUTTON_IMAGE", R.drawable.back_topic1_1_asset);
 
                 startActivity(intent);
@@ -71,7 +71,7 @@ public class topic1screen extends AppCompatActivity {
 
                 intent.putExtra("DRAGGABLE0", R.drawable.generic_monkey_1_asset);
                 intent.putExtra("FIXED0", R.drawable.generic_tree_asset_1);
-                intent.putExtra("INSTRUCTION", "Coloca el mono en la base del árbol (quemada,TODO:arreglar)");
+                intent.putExtra("INSTRUCTION", "Coloca el mono en la base del árbol (Instruccion quemada,TODO:arreglar)");
                 intent.putExtra("BACK_BUTTON_IMAGE", R.drawable.back_topic1_2_asset);
                 // above, below, left, right
                 intent.putExtra("EXPECTED_POSITION", "below");

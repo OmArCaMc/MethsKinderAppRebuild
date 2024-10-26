@@ -16,6 +16,7 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import android.view.MotionEvent;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import java.util.Random;
@@ -93,9 +94,9 @@ public class draggableImage extends AppCompatActivity {
                 // Finish the current activity and go back to the previous activity.
                 boolean isCorrect = checkAnswers();
                 if(!isCorrect){
-                    answersAreIncorrect();
+                    showFeedbackAnimation(false, "Vuelve a intentarlo");
                 } else {
-                    answersAreCorrect();
+                    showFeedbackAnimation(true, "¡Excelente trabajo!");
                 }
             }
         });
@@ -210,4 +211,36 @@ public class draggableImage extends AppCompatActivity {
             }
         });
     }
+
+    private void showFeedbackAnimation(boolean isCorrect, String feedbackMessage) {
+        // Get the views
+        LinearLayout feedbackLayout = findViewById(R.id.feedbackLayout);
+        ImageView feedbackImage = findViewById(R.id.feedbackImage);
+        TextView feedbackText = findViewById(R.id.feedbackText);
+
+        // Set the emoji and feedback text
+        feedbackImage.setImageResource(isCorrect ? R.drawable.generic_happy_emoji : R.drawable.generic_sad_emoji);
+        feedbackText.setText(feedbackMessage);
+
+        // Show the view of feedback and set initial position out of screen
+        feedbackLayout.setVisibility(View.VISIBLE);
+        feedbackLayout.setTranslationY(-feedbackLayout.getHeight());
+
+        // Down animation
+        feedbackLayout.animate()
+                .translationY(0)
+                .setDuration(500)
+                .withEndAction(() -> {
+                    // Wait 3 seconds and then hide the feedback
+                    feedbackLayout.postDelayed(() -> {
+                        feedbackLayout.animate()
+                                .translationY(-feedbackLayout.getHeight())
+                                .setDuration(500)
+                                .withEndAction(() -> feedbackLayout.setVisibility(View.GONE))
+                                .start();
+                    }, 3000);
+                })
+                .start();
+    }
+
 }

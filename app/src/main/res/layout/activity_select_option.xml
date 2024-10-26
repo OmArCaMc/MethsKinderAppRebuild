@@ -23,6 +23,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="sans-serif"
+        android:textSize="15sp"
+        android:textColor="@android:color/black"
         android:text="Clasifica los animales"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -84,5 +86,34 @@
         android:layout_width="0dp"
         android:background="@null"
         android:scaleType="fitCenter" />
+
+    <LinearLayout
+        android:id="@+id/feedbackLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:background="#AA000000"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!-- Texto de feedback -->
+        <TextView
+            android:id="@+id/feedbackText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Imagen de feedback (emoji) -->
+        <ImageView
+            android:id="@+id/feedbackImage"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:contentDescription="Bien hecho!" />
+    </LinearLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
