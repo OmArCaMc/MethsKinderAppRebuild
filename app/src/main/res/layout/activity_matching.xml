@@ -17,7 +17,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.449"
-        app:srcCompat="@drawable/monkey_asset" />
+        app:srcCompat="@drawable/generic_monkey_1_asset" />
 
     <ImageView
         android:id="@+id/Monito1Grupo1"
@@ -29,7 +29,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.36"
-        app:srcCompat="@drawable/monkey_asset" />
+        app:srcCompat="@drawable/generic_monkey_1_asset" />
 
     <ImageView
         android:id="@+id/Monito1Grupo2"
@@ -41,7 +41,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.77"
-        app:srcCompat="@drawable/monkey_asset" />
+        app:srcCompat="@drawable/generic_monkey_1_asset" />
 
     <ImageView
         android:id="@+id/Banana1Grupo2"

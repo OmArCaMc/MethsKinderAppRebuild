@@ -44,7 +44,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.789"
-        app:srcCompat="@drawable/monkey_asset" />
+        app:srcCompat="@drawable/generic_monkey_1_asset" />
 
     <ImageView
         android:id="@+id/monkey2_asset"
@@ -57,7 +57,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.901"
-        app:srcCompat="@drawable/monkey2_asset" />
+        app:srcCompat="@drawable/generic_monkey_1_asset" />
 
     <ImageView
         android:id="@+id/panda_asset"
@@ -70,7 +70,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.789"
-        app:srcCompat="@drawable/panda_asset" />
+        app:srcCompat="@drawable/generic_panda_asset" />
 
     <ImageView
         android:id="@+id/bear_asset"
@@ -83,7 +83,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.901"
-        app:srcCompat="@drawable/bear_asset" />
+        app:srcCompat="@drawable/generic_bear_asset" />
 
     <ImageView
         android:id="@+id/tucan_asset"
@@ -96,7 +96,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.84"
-        app:srcCompat="@drawable/tucan_asset" />
+        app:srcCompat="@drawable/generic_tucan_asset" />
 
     <ImageView
         android:id="@+id/bird_asset"
@@ -109,5 +109,5 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.84"
-        app:srcCompat="@drawable/bird_asset" />
+        app:srcCompat="@drawable/generic_bird_asset" />
 </androidx.constraintlayout.widget.ConstraintLayout>

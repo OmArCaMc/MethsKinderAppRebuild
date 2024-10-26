@@ -50,13 +50,13 @@ public class topic1screen extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(topic1screen.this, dragMultipleImagesMod.class);
-                intent.putExtra("DRAGGABLE0", R.drawable.bear_asset);
-                intent.putExtra("FRAME0", R.drawable.generic_tree_asset_1);
-                intent.putExtra("DRAGGABLE1", R.drawable.bunny);
-                intent.putExtra("FRAME1", R.drawable.bunny);
-                intent.putExtra("DRAGGABLE2", R.drawable.lion);
-                intent.putExtra("FRAME2", R.drawable.lion);
-                intent.putExtra("INSTRUCTION", "Instruccion radical");
+                intent.putExtra("DRAGGABLE0", R.drawable.generic_seal_asset);
+                intent.putExtra("FRAME0", R.drawable.generic_whale_asset);
+                intent.putExtra("DRAGGABLE1", R.drawable.generic_egg5_asset);
+                intent.putExtra("FRAME1", R.drawable.generic_egg1_asset);
+                intent.putExtra("DRAGGABLE2", R.drawable.generic_squirrel_asset);
+                intent.putExtra("FRAME2", R.drawable.generic_tree_asset_1);
+                intent.putExtra("INSTRUCTION", R.string.Instruction_1_1);
                 intent.putExtra("BACK_BUTTON_IMAGE", R.drawable.back_topic1_4_asset);
 
                 startActivity(intent);
@@ -67,7 +67,14 @@ public class topic1screen extends AppCompatActivity {
         question2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(topic1screen.this, dragMultipleImages.class);
+                Intent intent = new Intent(topic1screen.this, draggableImage.class);
+
+                intent.putExtra("DRAGGABLE0", R.drawable.generic_monkey_1_asset);
+                intent.putExtra("FIXED0", R.drawable.generic_tree_asset_1);
+                intent.putExtra("INSTRUCTION", R.string.Instruction_1_2);
+                intent.putExtra("BACK_BUTTON_IMAGE", R.drawable.back_topic1_4_asset);
+                // above, below, left, right
+                intent.putExtra("EXPECTED_POSITION", "below");
                 startActivity(intent);
             }
         });
@@ -87,31 +94,15 @@ public class topic1screen extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(topic1screen.this, SelectOptionMod.class);
 
-                intent.putExtra("INSTRUCTION", R.string.Instruction_1_1);
-                intent.putExtra("ILLUSTRATION", R.drawable.monkey2_asset);
-                intent.putExtra("OP1", R.drawable.monkey2_asset);
-                intent.putExtra("OP2", R.drawable.bird_asset);
-                intent.putExtra("OP3", R.drawable.tucan_asset);
+                intent.putExtra("INSTRUCTION", R.string.Instruction_1_4);
+                intent.putExtra("ILLUSTRATION", R.drawable.generic_monkey_2_asset);
+                intent.putExtra("OP1", R.drawable.generic_monkey_2_asset);
+                intent.putExtra("OP2", R.drawable.generic_bird_asset);
+                intent.putExtra("OP3", R.drawable.generic_tucan_asset);
                 intent.putExtra("RightOp", 1); // Establece la opción correcta (ej. 1)
                 intent.putExtra("BACK_BUTTON_IMAGE", R.drawable.back_topic1_4_asset);
 
 
-                startActivity(intent);
-            }
-        });
-
-        question5 = (Button) findViewById(R.id.question5);
-        question5.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(topic1screen.this, draggableImage.class);
-
-                intent.putExtra("DRAGGABLE0", R.drawable.monkey_asset);
-                intent.putExtra("FIXED0", R.drawable.generic_tree_asset_1);
-                intent.putExtra("INSTRUCTION", "Instruccion radical");
-                intent.putExtra("BACK_BUTTON_IMAGE", R.drawable.back_topic1_4_asset);
-                // above, below, left, right
-                intent.putExtra("EXPECTED_POSITION", "below");
                 startActivity(intent);
             }
         });

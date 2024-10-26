@@ -122,6 +122,6 @@
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:background="@drawable/button"
+        android:background="@drawable/button_check_asset"
         />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -10,12 +10,17 @@
     <string name="menu">Menu</string>
     <string name="hola">Hola</string>
     <string name="adios">Adios</string>
-    <string name="Instruction_1_1">"Instrucción</string>
     <string name="feedback_correct">¡Muy bien!</string>
     <string name="feedback_incorrect">¡Tú puedes! Inténtalo de nuevo.</string>
     <string name="option_a">a</string>
     <string name="option_b">b</string>
     <string name="option_c">c</string>
-    <string name="instruccion_mieo">Instruccion mieo</string>
+
+    <string name="Instruction_1_1">"Relaciona los animales</string>
+    <string name="Instruction_1_2">"Coloca el mono en la base del árbol</string>
+    <string name="Instruction_1_3">"()</string>
+    <string name="Instruction_1_4">"Cual animal aparece en la imagen</string>
+
+
 
 </resources>
