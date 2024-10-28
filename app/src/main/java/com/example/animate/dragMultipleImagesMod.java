@@ -116,7 +116,7 @@ public class dragMultipleImagesMod extends AppCompatActivity {
         Intent intent = getIntent();
         if(intent != null){
             TextView instructionView = findViewById(R.id.instruction);
-            String instructionText = intent.getStringExtra("INSTRUCTION");
+            int instructionText = intent.getIntExtra("INSTRUCTION", 0);
             instructionView.setText(instructionText);
         }
     }

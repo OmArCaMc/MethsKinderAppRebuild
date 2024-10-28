@@ -16,11 +16,8 @@
     <string name="option_b">b</string>
     <string name="option_c">c</string>
 
-    <string name="Instruction_1_1">"Relaciona los animales</string>
-    <string name="Instruction_1_2">"Coloca el mono en la base del árbol</string>
-    <string name="Instruction_1_3">"()</string>
-    <string name="Instruction_1_4">"Cual animal aparece en la imagen</string>
-
-
-
+    <string name="Instruction_1_1">Relaciona los animales</string>
+    <string name="Instruction_1_2">Coloca el mono en la base del árbol</string>
+    <string name="Instruction_1_3">()</string>
+    <string name="Instruction_1_4">Cual animal aparece en la imagen</string>
 </resources>
