@@ -19,10 +19,17 @@ import java.util.ArrayList;
 import java.util.Random;
 import androidx.activity.EdgeToEdge;
 
+import android.view.ViewGroup;
+
 public class matchingActivityNoMod extends AppCompatActivity {
     // Declare button
     Button back,clear,check;
     private DrawView drawView;
+
+    // Define feedback layout views
+    private View feedbackLayout;
+    private ImageView feedbackImage;
+    private TextView feedbackText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +37,15 @@ public class matchingActivityNoMod extends AppCompatActivity {
         // Expand to all screen
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_matching);
+
+        // Inflate and add the feedback layout to the root layout
+        feedbackLayout = getLayoutInflater().inflate(R.layout.feedback_layout, null);
+        ViewGroup rootLayout = findViewById(android.R.id.content);
+        rootLayout.addView(feedbackLayout);
+
+        // Get references to feedback components
+        feedbackImage = feedbackLayout.findViewById(R.id.feedbackImage);
+        feedbackText = feedbackLayout.findViewById(R.id.feedbackText);
 
         // Initialize custom DrawView for drawing paths
         drawView = new DrawView(this);
@@ -126,35 +142,22 @@ public class matchingActivityNoMod extends AppCompatActivity {
     }
 
     private void showFeedbackAnimation(boolean isCorrect, String feedbackMessage) {
-        // Get the views
-        LinearLayout feedbackLayout = findViewById(R.id.feedbackLayout);
-        ImageView feedbackImage = findViewById(R.id.feedbackImage);
-        TextView feedbackText = findViewById(R.id.feedbackText);
-
-        // Set the emoji and feedback text (here we have just a ? emoji)
         feedbackImage.setImageResource(isCorrect ? R.drawable.generic_thoughtful_emoji : R.drawable.generic_thoughtful_emoji);
         feedbackText.setText(feedbackMessage);
 
-        // Show the view of feedback and set initial position out of screen
         feedbackLayout.setVisibility(View.VISIBLE);
         feedbackLayout.setTranslationY(-feedbackLayout.getHeight());
 
-        // Down animation
         feedbackLayout.animate()
                 .translationY(0)
                 .setDuration(500)
-                .withEndAction(() -> {
-                    // Wait 3 seconds and then hide the feedback
-                    feedbackLayout.postDelayed(() -> {
-                        feedbackLayout.animate()
-                                .translationY(-feedbackLayout.getHeight())
-                                .setDuration(500)
-                                .withEndAction(() -> feedbackLayout.setVisibility(View.GONE))
-                                .start();
-                    }, 3000);
-                })
+                .withEndAction(() -> feedbackLayout.postDelayed(() -> {
+                    feedbackLayout.animate()
+                            .translationY(-feedbackLayout.getHeight())
+                            .setDuration(500)
+                            .withEndAction(() -> feedbackLayout.setVisibility(View.GONE))
+                            .start();
+                }, 3000))
                 .start();
     }
-
-
 }
