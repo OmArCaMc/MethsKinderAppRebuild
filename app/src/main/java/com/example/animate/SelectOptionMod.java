@@ -19,6 +19,8 @@ import androidx.databinding.ViewDataBinding;
 
 import com.example.animate.databinding.ActivitySelectOptionBinding;
 
+import java.util.Random;
+
 public class SelectOptionMod extends AppCompatActivity {
 
     Button back;
@@ -41,10 +43,11 @@ public class SelectOptionMod extends AppCompatActivity {
 //            dataSelectOption = new DataSelectOption();
             setInstruction(intent.getIntExtra("INSTRUCTION", 0));
             setIllustration(intent.getIntExtra("ILLUSTRATION", 0));
-            setOp1(intent.getIntExtra("OP1", 0));
-            setOp2(intent.getIntExtra("OP2", 0));
-            setOp3(intent.getIntExtra("OP3", 0));
             setRightOp(intent.getIntExtra("RightOp",0));
+            // Generate random number between 0 - 99
+            Random random = new Random();
+            int randomNum = random.nextInt(100);
+            setOptions(randomNum, intent);
             setBackButtonImage(intent.getIntExtra("BACK_BUTTON_IMAGE", 0));
         }
         setOnClickListeners();
@@ -163,4 +166,65 @@ public class SelectOptionMod extends AppCompatActivity {
                 .start();
     }
 
+    private void setOptions(int randomNum, Intent intent) {
+        if (randomNum <= 17) {
+            setOp1(intent.getIntExtra("OP1", 0));
+            setOp2(intent.getIntExtra("OP2", 0));
+            setOp3(intent.getIntExtra("OP3", 0));
+        } else if (randomNum <= 34) {
+            setOp1(intent.getIntExtra("OP1", 0));
+            setOp2(intent.getIntExtra("OP3", 0));
+            setOp3(intent.getIntExtra("OP2", 0));
+            // Change right option
+            if (rightOp == 2) {
+                setRightOp(3);
+            } else if (rightOp == 3) {
+                setRightOp(2);
+            }
+        } else if (randomNum <= 50) {
+            setOp1(intent.getIntExtra("OP2", 0));
+            setOp2(intent.getIntExtra("OP1", 0));
+            setOp3(intent.getIntExtra("OP3", 0));
+            // Change right option
+            if (rightOp == 1) {
+                setRightOp(2);
+            } else if (rightOp == 2) {
+                setRightOp(1);
+            }
+        } else if (randomNum <= 66) {
+            setOp1(intent.getIntExtra("OP2", 0));
+            setOp2(intent.getIntExtra("OP3", 0));
+            setOp3(intent.getIntExtra("OP1", 0));
+            // Change right option
+            if (rightOp == 1) {
+                setRightOp(3);
+            } else if (rightOp == 2) {
+                setRightOp(1);
+            } else {
+                setRightOp(2);
+            }
+        } else if (randomNum <= 82) {
+            setOp1(intent.getIntExtra("OP3", 0));
+            setOp2(intent.getIntExtra("OP1", 0));
+            setOp3(intent.getIntExtra("OP2", 0));
+            // Change right option
+            if (rightOp == 1) {
+                setRightOp(2);
+            } else if (rightOp == 2) {
+                setRightOp(3);
+            } else {
+                setRightOp(1);
+            }
+        } else {
+            setOp1(intent.getIntExtra("OP3", 0));
+            setOp2(intent.getIntExtra("OP2", 0));
+            setOp3(intent.getIntExtra("OP1", 0));
+            // Change right option
+            if (rightOp == 1) {
+                setRightOp(3);
+            } else if (rightOp == 3) {
+                setRightOp(1);
+            }
+        }
+    }
 }
