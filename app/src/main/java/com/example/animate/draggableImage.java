@@ -16,6 +16,7 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import android.view.MotionEvent;
+import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -33,6 +34,11 @@ public class draggableImage extends AppCompatActivity {
     private int[][] views;
     private Handler pauseHandler;
 
+    // Define feedback layout views
+    private View feedbackLayout;
+    private ImageView feedbackImage;
+    private TextView feedbackText;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         // Call the superclass constructor.
@@ -41,6 +47,15 @@ public class draggableImage extends AppCompatActivity {
         EdgeToEdge.enable(this);
         // Set the layout for the activity to 'activity_draggableimage'.
         setContentView(R.layout.activity_draggableimage);
+
+        // Inflate and add the feedback layout to the root layout
+        feedbackLayout = getLayoutInflater().inflate(R.layout.feedback_layout, null);
+        ViewGroup rootLayout = findViewById(android.R.id.content);
+        rootLayout.addView(feedbackLayout);
+
+        // Get references to feedback components
+        feedbackImage = feedbackLayout.findViewById(R.id.feedbackImage);
+        feedbackText = feedbackLayout.findViewById(R.id.feedbackText);
 
         // Handle window insets as before
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
@@ -141,23 +156,6 @@ public class draggableImage extends AppCompatActivity {
         }
     }
 
-    private void answersAreCorrect(){
-        TextView feedback = findViewById(R.id.feedBack);
-        feedback.setText(R.string.feedback_correct);
-    }
-
-    private void answersAreIncorrect(){
-        TextView feedback = findViewById(R.id.feedBack);
-        feedback.setText(R.string.feedback_incorrect);
-        this.pauseHandler.postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                feedback.setText("");
-                recreate();
-            }
-        }, 3000);
-    }
-
     private void setViews(){
         views = new int [2][1];
         views[0][0] = R.id.draggable_0;
@@ -213,34 +211,22 @@ public class draggableImage extends AppCompatActivity {
     }
 
     private void showFeedbackAnimation(boolean isCorrect, String feedbackMessage) {
-        // Get the views
-        LinearLayout feedbackLayout = findViewById(R.id.feedbackLayout);
-        ImageView feedbackImage = findViewById(R.id.feedbackImage);
-        TextView feedbackText = findViewById(R.id.feedbackText);
-
-        // Set the emoji and feedback text
         feedbackImage.setImageResource(isCorrect ? R.drawable.generic_happy_emoji : R.drawable.generic_sad_emoji);
         feedbackText.setText(feedbackMessage);
 
-        // Show the view of feedback and set initial position out of screen
         feedbackLayout.setVisibility(View.VISIBLE);
         feedbackLayout.setTranslationY(-feedbackLayout.getHeight());
 
-        // Down animation
         feedbackLayout.animate()
                 .translationY(0)
                 .setDuration(500)
-                .withEndAction(() -> {
-                    // Wait 3 seconds and then hide the feedback
-                    feedbackLayout.postDelayed(() -> {
-                        feedbackLayout.animate()
-                                .translationY(-feedbackLayout.getHeight())
-                                .setDuration(500)
-                                .withEndAction(() -> feedbackLayout.setVisibility(View.GONE))
-                                .start();
-                    }, 3000);
-                })
+                .withEndAction(() -> feedbackLayout.postDelayed(() -> {
+                    feedbackLayout.animate()
+                            .translationY(-feedbackLayout.getHeight())
+                            .setDuration(500)
+                            .withEndAction(() -> feedbackLayout.setVisibility(View.GONE))
+                            .start();
+                }, 3000))
                 .start();
     }
-
 }

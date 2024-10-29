@@ -18,7 +18,7 @@ import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
-
+import android.view.ViewGroup;
 import org.w3c.dom.Text;
 
 import java.util.Random;
@@ -38,12 +38,26 @@ public class dragMultipleImagesMod extends AppCompatActivity {
     private int [][] views;
     private Handler pauseHandler;
 
+    // Define feedback layout views
+    private View feedbackLayout;
+    private ImageView feedbackImage;
+    private TextView feedbackText;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         // Expand to all screen
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_drag_multiple_images_mod);
+
+        // Inflate and add the feedback layout to the root layout
+        feedbackLayout = getLayoutInflater().inflate(R.layout.feedback_layout, null);
+        ViewGroup rootLayout = findViewById(android.R.id.content);
+        rootLayout.addView(feedbackLayout);
+
+        // Get references to feedback components
+        feedbackImage = feedbackLayout.findViewById(R.id.feedbackImage);
+        feedbackText = feedbackLayout.findViewById(R.id.feedbackText);
 
         // Handle window insets as before
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
@@ -61,34 +75,6 @@ public class dragMultipleImagesMod extends AppCompatActivity {
         generateLayout();
         setCheckListener();
         this.pauseHandler = new Handler(Looper.getMainLooper());
-
-
-
-//        draggable1 = findViewById(R.id.draggable_0);
-//        draggable1.setImageResource(positions[0][0]);
-//        draggable2 = findViewById(R.id.draggable_1);
-//        draggable2.setImageResource(positions[0][1]);
-//        draggable3 = findViewById(R.id.draggable_2);
-//        draggable3.setImageResource(positions[0][2]);
-//        frame1 = findViewById(R.id.frame_0);
-//        frame1.setImageResource(positions[1][0]);
-//        frame2 = findViewById(R.id.frame_1);
-//        frame2.setImageResource(positions[1][1]);
-//        frame3 = findViewById(R.id.frame_2);
-//        frame2.setImageResource(positions[1][2]);
-
-//        correlations[0][0] = R.id.draggable_0;
-//        correlations[0][1] = R.id.draggable_1;
-//        correlations[0][2] = R.id.draggable_2;
-//        correlations[1][0] = R.id.frame_0;
-//        correlations[1][1] = R.id.frame_1;
-//        correlations[1][2] = R.id.frame_2;
-//        setViews();
-
-
-        // Set up dragging for the draggable image
-//        setDraggable(draggable1); setDraggable(draggable2);
-//        setDraggable(draggable3);
     }
 
     private void setCorrelations(){
@@ -145,23 +131,6 @@ public class dragMultipleImagesMod extends AppCompatActivity {
             }
         }
         return true;
-    }
-
-    private void answersAreCorrect(){
-        TextView feedback = findViewById(R.id.feedBack);
-        feedback.setText(R.string.feedback_correct);
-    }
-
-    private void answersAreIncorrect(){
-        TextView feedback = findViewById(R.id.feedBack);
-        feedback.setText(R.string.feedback_incorrect);
-        this.pauseHandler.postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                feedback.setText("");
-                recreate();
-            }
-        }, 3000);
     }
 
     private void setViews(){
@@ -264,33 +233,22 @@ public class dragMultipleImagesMod extends AppCompatActivity {
     }
 
     private void showFeedbackAnimation(boolean isCorrect, String feedbackMessage) {
-        // Get the views
-        LinearLayout feedbackLayout = findViewById(R.id.feedbackLayout);
-        ImageView feedbackImage = findViewById(R.id.feedbackImage);
-        TextView feedbackText = findViewById(R.id.feedbackText);
-
-        // Set the emoji and feedback text
         feedbackImage.setImageResource(isCorrect ? R.drawable.generic_happy_emoji : R.drawable.generic_sad_emoji);
         feedbackText.setText(feedbackMessage);
 
-        // Show the view of feedback and set initial position out of screen
         feedbackLayout.setVisibility(View.VISIBLE);
         feedbackLayout.setTranslationY(-feedbackLayout.getHeight());
 
-        // Down animation
         feedbackLayout.animate()
                 .translationY(0)
                 .setDuration(500)
-                .withEndAction(() -> {
-                    // Wait 3 seconds and then hide the feedback
-                    feedbackLayout.postDelayed(() -> {
-                        feedbackLayout.animate()
-                                .translationY(-feedbackLayout.getHeight())
-                                .setDuration(500)
-                                .withEndAction(() -> feedbackLayout.setVisibility(View.GONE))
-                                .start();
-                    }, 3000);
-                })
+                .withEndAction(() -> feedbackLayout.postDelayed(() -> {
+                    feedbackLayout.animate()
+                            .translationY(-feedbackLayout.getHeight())
+                            .setDuration(500)
+                            .withEndAction(() -> feedbackLayout.setVisibility(View.GONE))
+                            .start();
+                }, 3000))
                 .start();
     }
 }
