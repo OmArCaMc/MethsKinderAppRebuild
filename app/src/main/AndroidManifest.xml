@@ -48,8 +48,10 @@
         <activity
             android:name=".menu"
             android:exported="false" />
-        <activity android:name=".SelectOptionMod"
-            android:exported="false" />
+        <activity
+            android:name=".SelectOptionMod"
+            android:exported="false"
+            />
         <activity
             android:name=".startActivity"
             android:exported="true">

@@ -14,10 +14,6 @@ import android.widget.LinearLayout;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.databinding.DataBindingUtil;
-import androidx.databinding.ViewDataBinding;
-
-import com.example.animate.databinding.ActivitySelectOptionBinding;
 
 import java.util.Random;
 
@@ -30,17 +26,13 @@ public class SelectOptionMod extends AppCompatActivity {
     @Override protected void onCreate(Bundle savedInstance){
         super.onCreate(savedInstance);
         DataSelectOption dataSelectOption = new DataSelectOption();
-        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
-//        ViewDataBinding binding = DataBindingUtil.setContentView(this, R.layout.activity_select_option);
 
         // Expand to all screen
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_select_option);
-//        binding.setLifecycleOwner(this);
 
         Intent intent = getIntent();
         if (intent != null) {
-//            dataSelectOption = new DataSelectOption();
             setInstruction(intent.getIntExtra("INSTRUCTION", 0));
             setIllustration(intent.getIntExtra("ILLUSTRATION", 0));
             setRightOp(intent.getIntExtra("RightOp",0));
