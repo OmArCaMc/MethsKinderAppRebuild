@@ -57,7 +57,7 @@ public class topic1screen extends AppCompatActivity {
                 intent.putExtra("DRAGGABLE2", R.drawable.generic_squirrel_asset);
                 intent.putExtra("FRAME2", R.drawable.generic_tree_asset_1);
                 intent.putExtra("INSTRUCTION", R.string.Instruction_1_1);
-                intent.putExtra("BACK_BUTTON_IMAGE", R.drawable.back_topic1_1_1_asset);
+                intent.putExtra("BACK_BUTTON_IMAGE", R.drawable.back_topic1_1_asset);
 
                 startActivity(intent);
             }
