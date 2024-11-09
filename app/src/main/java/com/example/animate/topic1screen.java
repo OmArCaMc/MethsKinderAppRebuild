@@ -84,6 +84,7 @@ public class topic1screen extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(topic1screen.this, matchingActivityNoMod.class);
+                intent.putExtra("BACK_BUTTON_IMAGE", R.drawable.back_topic1_3_asset);
                 startActivity(intent);
             }
         });

@@ -83,7 +83,6 @@
         android:id="@+id/backBttn"
         android:layout_width="52dp"
         android:layout_height="59dp"
-        android:background="@drawable/back_topic1_1_asset"
         android:tint="@null"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

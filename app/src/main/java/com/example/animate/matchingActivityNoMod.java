@@ -38,6 +38,10 @@ public class matchingActivityNoMod extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_matching);
 
+        // Set the back button small modularization
+        int backButtonImage = getIntent().getIntExtra("BACK_BUTTON_IMAGE", 0);
+        setBackButtonImage(backButtonImage);
+
         // Inflate and add the feedback layout to the root layout
         feedbackLayout = getLayoutInflater().inflate(R.layout.feedback_layout, null);
         ViewGroup rootLayout = findViewById(android.R.id.content);
@@ -65,6 +69,11 @@ public class matchingActivityNoMod extends AppCompatActivity {
         clear.setOnClickListener(v -> {
             drawView.clearPaths();  // Call the function to clear the paths
         });
+    }
+
+    private void setBackButtonImage(int resourceId) {
+        Button back = findViewById(R.id.backBttn);
+        back.setBackgroundResource(resourceId);
     }
 
     // Custom view class to draw continuous paths
