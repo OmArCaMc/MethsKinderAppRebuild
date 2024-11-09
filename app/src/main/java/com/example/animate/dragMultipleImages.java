@@ -32,6 +32,10 @@ public class dragMultipleImages extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_drag_multiple_images);
 
+        // Set the back button small modularization
+        int backButtonImage = getIntent().getIntExtra("BACK_BUTTON_IMAGE", 0);
+        setBackButtonImage(backButtonImage);
+
         // Handle window insets as before
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             v.setPadding(insets.getInsets(WindowInsetsCompat.Type.systemBars()).left,
@@ -42,17 +46,7 @@ public class dragMultipleImages extends AppCompatActivity {
         });
 
         back = findViewById(R.id.backBttn);
-        back.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // Finish the current activity and go back to the previous activity.
-                finish();
-            }
-        });
-
-//        frame1 = findViewById(R.id.frame1_asset);
-//        frame2 = findViewById(R.id.frame2_asset);
-//        frame3 = findViewById(R.id.frame3_asset);
+        back.setOnClickListener(v -> finish());
 
         monkey = findViewById(R.id.monkey_asset);
         monkey2 = findViewById(R.id.monkey2_asset);
@@ -65,6 +59,11 @@ public class dragMultipleImages extends AppCompatActivity {
         setDraggable(monkey); setDraggable(monkey2);
         setDraggable(panda); setDraggable(bear);
         setDraggable(tucan); setDraggable(bird);
+    }
+
+    private void setBackButtonImage(int resourceId) {
+        Button back = findViewById(R.id.backBttn);
+        back.setBackgroundResource(resourceId);
     }
 
     @SuppressLint("ClickableViewAccessibility")

@@ -50,6 +50,10 @@ public class dragMultipleImagesMod extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_drag_multiple_images_mod);
 
+        // Set the back button small modularization
+        int backButtonImage = getIntent().getIntExtra("BACK_BUTTON_IMAGE", 0);
+        setBackButtonImage(backButtonImage);
+
         // Inflate and add the feedback layout to the root layout
         feedbackLayout = getLayoutInflater().inflate(R.layout.feedback_layout, null);
         ViewGroup rootLayout = findViewById(android.R.id.content);
@@ -77,6 +81,11 @@ public class dragMultipleImagesMod extends AppCompatActivity {
         this.pauseHandler = new Handler(Looper.getMainLooper());
     }
 
+    private void setBackButtonImage(int resourceId) {
+        Button back = findViewById(R.id.backBttn);
+        back.setBackgroundResource(resourceId);
+    }
+
     private void setCorrelations(){
         Intent intent = getIntent();
         if (intent != null) {
@@ -90,12 +99,15 @@ public class dragMultipleImagesMod extends AppCompatActivity {
         }
     }
 
-    private void setBackListener() {
+    private void setBackListener(){
         back = findViewById(R.id.backBttn);
-        Intent intent = getIntent();
-        int backButtonImage = intent.getIntExtra("BACK_BUTTON_IMAGE", 0);
-        back.setBackgroundResource(backButtonImage);
-        back.setOnClickListener(v -> finish());
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Finish the current activity and go back to the previous activity.
+                finish();
+            }
+        });
     }
 
     private void setInstruction(){
