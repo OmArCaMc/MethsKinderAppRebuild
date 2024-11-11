@@ -1,5 +1,6 @@
 package com.example.animate;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -14,6 +15,13 @@ import androidx.core.view.WindowInsetsCompat;
 public class topic6screen extends AppCompatActivity {
     // Declare a button named back to return.
     Button back;
+    Button question1;
+    Button question2;
+    Button question3;
+    Button question4;
+    Button question5;
+    Button question6;
+
 
     @Override
     // Method called when the activity is first created.
@@ -42,6 +50,24 @@ public class topic6screen extends AppCompatActivity {
             public void onClick(View v) {
                 // Finish the current activity and go back to the previous activity.
                 finish();
+            }
+        });
+
+        question1 = (Button) findViewById(R.id.question1);
+        question1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(topic6screen.this, SelectOptionMod.class);
+
+                intent.putExtra("INSTRUCTION", R.string.Instruction_6_1);
+                intent.putExtra("ILLUSTRATION", R.drawable.question_6_1);
+                intent.putExtra("OP1", R.drawable.generic_squirrel_asset);
+                intent.putExtra("OP2", R.drawable.generic_fox_asset);
+                intent.putExtra("OP3", R.drawable.generic_bird_asset);
+                intent.putExtra("RightOp", 3); // Establece la opción correcta (ej. 1)
+                intent.putExtra("BACK_BUTTON_IMAGE", R.drawable.back_topic6_1_asset);
+
+                startActivity(intent);
             }
         });
     }

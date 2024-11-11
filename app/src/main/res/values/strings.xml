@@ -20,4 +20,15 @@
     <string name="Instruction_1_2">Coloca el mono en la base del árbol</string>
     <string name="Instruction_1_3">()</string>
     <string name="Instruction_1_4">Cual animal aparece en la imagen</string>
+
+    <string name="Instruction_6_1">¿Cuál animalito es el siguiente?</string>
+    <string name="Instruction_6_2">¿Cuál animalito es el siguiente?</string>
+    <string name="Instruction_6_3">¿Cuál animalito fue el primero?</string>
+    <string name="Instruction_6_4">¿Cuál animalito debería estar en esa posición?</string>
+    <string name="Instruction_6_5">Relaciona los animales.</string>
+    <string name="Instruction_6_6">¿Qué animal estaba antes del perro, pero saltando tres animales?</string>
+
+
+
+
 </resources>
