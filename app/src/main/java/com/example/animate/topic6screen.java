@@ -125,7 +125,23 @@ public class topic6screen extends AppCompatActivity {
             }
         });
 
-        
+        question5 = (Button) findViewById(R.id.question5);
+        question5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(topic6screen.this, SelectOptionMod.class);
+
+                intent.putExtra("INSTRUCTION", R.string.Instruction_6_5);
+                intent.putExtra("ILLUSTRATION", R.drawable.question_6_5);
+                intent.putExtra("OP1", R.drawable.generic_monkey_1_asset);
+                intent.putExtra("OP2", R.drawable.generic_bear_asset);
+                intent.putExtra("OP3", R.drawable.generic_lion_asset);
+                intent.putExtra("RightOp", 1); // Establece la opción correcta (ej. 1)
+                intent.putExtra("BACK_BUTTON_IMAGE", R.drawable.back_topic6_5_asset);
+
+                startActivity(intent);
+            }
+        });
 
     }
 }
