@@ -26,7 +26,7 @@
     <string name="Instruction_6_3">¿Cuál animalito debería estar en esa posición? </string>
     <string name="Instruction_6_4">¿Cuál animalito fue el primero?</string>
     <string name="Instruction_6_5">¿Cuál animalito debería estar en esa posición?</string>
-    <string name="Instruction_6_6">¿Qué animal estaba antes del perro, pero saltando tres animales?</string>
+    <string name="Instruction_6_6">¿Qué animal sigue después del gato, pero saltando \n dos animales hacia adelante?</string>
 
 
 
