@@ -106,10 +106,10 @@ public class topic1screen extends AppCompatActivity {
                 Intent intent = new Intent(topic1screen.this, SelectOptionMod.class);
 
                 intent.putExtra("INSTRUCTION", R.string.Instruction_1_4);
-                intent.putExtra("ILLUSTRATION", R.drawable.generic_monkey_2_asset);
-                intent.putExtra("OP1", R.drawable.generic_monkey_2_asset);
-                intent.putExtra("OP2", R.drawable.generic_bird_asset);
-                intent.putExtra("OP3", R.drawable.generic_tucan_asset);
+                intent.putExtra("ILLUSTRATION", R.drawable.question1_4);
+                intent.putExtra("OP1", R.drawable.generic_forest1_asset);
+                intent.putExtra("OP2", R.drawable.generic_forest2_asset);
+                intent.putExtra("OP3", R.drawable.generic_forest3_asset);
                 intent.putExtra("RightOp", 1); // Establece la opción correcta (ej. 1)
                 intent.putExtra("BACK_BUTTON_IMAGE", R.drawable.back_topic1_4_asset);
 
@@ -117,5 +117,6 @@ public class topic1screen extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
     }
 }
