@@ -49,14 +49,14 @@ public class topic1screen extends AppCompatActivity {
         question1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(topic1screen.this, dragMultipleImagesMod.class);
-                intent.putExtra("DRAGGABLE0", R.drawable.generic_seal_asset);
-                intent.putExtra("FRAME0", R.drawable.generic_whale_asset);
-                intent.putExtra("DRAGGABLE1", R.drawable.generic_egg5_asset);
-                intent.putExtra("FRAME1", R.drawable.generic_egg1_asset);
-                intent.putExtra("DRAGGABLE2", R.drawable.generic_squirrel_asset);
-                intent.putExtra("FRAME2", R.drawable.generic_tree_asset_1);
+                Intent intent = new Intent(topic1screen.this, SelectOptionMod.class);
+
                 intent.putExtra("INSTRUCTION", R.string.Instruction_1_1);
+                intent.putExtra("ILLUSTRATION", R.drawable.question_1_1);
+                intent.putExtra("OP1", R.drawable.generic_cow_asset);
+                intent.putExtra("OP2", R.drawable.generic_cow_asset_2);
+                intent.putExtra("OP3", R.drawable.generic_cow_asset_3);
+                intent.putExtra("RightOp", 2); // Establece la opción correcta (ej. 1)
                 intent.putExtra("BACK_BUTTON_IMAGE", R.drawable.back_topic1_1_asset);
 
                 startActivity(intent);
@@ -67,14 +67,16 @@ public class topic1screen extends AppCompatActivity {
         question2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(topic1screen.this, draggableImage.class);
+                Intent intent = new Intent(topic1screen.this, SelectOptionMod.class);
 
-                intent.putExtra("DRAGGABLE0", R.drawable.generic_monkey_1_asset);
-                intent.putExtra("FIXED0", R.drawable.generic_tree_asset_1);
                 intent.putExtra("INSTRUCTION", R.string.Instruction_1_2);
+                intent.putExtra("ILLUSTRATION", R.drawable.question_1_2);
+                intent.putExtra("OP1", R.drawable.generic_bear_asset);
+                intent.putExtra("OP2", R.drawable.generic_panda_asset);
+                intent.putExtra("OP3", R.drawable.generic_squirrel_asset);
+                intent.putExtra("RightOp", 1); // Establece la opción correcta (ej. 1)
                 intent.putExtra("BACK_BUTTON_IMAGE", R.drawable.back_topic1_2_asset);
-                // above, below, left, right
-                intent.putExtra("EXPECTED_POSITION", "below");
+
                 startActivity(intent);
             }
         });
@@ -83,8 +85,16 @@ public class topic1screen extends AppCompatActivity {
         question3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(topic1screen.this, matchingActivityNoMod.class);
+                Intent intent = new Intent(topic1screen.this, SelectOptionMod.class);
+
+                intent.putExtra("INSTRUCTION", R.string.Instruction_1_3);
+                intent.putExtra("ILLUSTRATION", R.drawable.question_1_3);
+                intent.putExtra("OP1", R.drawable.generic_monkey_1_asset);
+                intent.putExtra("OP2", R.drawable.generic_pig_asset);
+                intent.putExtra("OP3", R.drawable.generic_lion_asset);
+                intent.putExtra("RightOp", 3); // Establece la opción correcta (ej. 1)
                 intent.putExtra("BACK_BUTTON_IMAGE", R.drawable.back_topic1_3_asset);
+
                 startActivity(intent);
             }
         });
