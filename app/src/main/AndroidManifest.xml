@@ -21,6 +21,8 @@
             android:exported="false" />
         <activity android:name=".dragMultipleImagesMod"
             android:exported="false" />
+        <activity android:name=".dragMultipleImagesTimeline"
+            android:exported="false" />
         <activity
             android:name=".draggableImage"
             android:exported="false" />

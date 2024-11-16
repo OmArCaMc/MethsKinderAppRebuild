@@ -73,7 +73,7 @@ public class topic3screen extends AppCompatActivity {
         question2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(topic3screen.this, dragMultipleImagesMod.class);
+                Intent intent = new Intent(topic3screen.this, dragMultipleImagesTimeline.class);
                 intent.putExtra("DRAGGABLE0", R.drawable.generic_egg1_asset);
                 intent.putExtra("FRAME0", R.drawable.generic_nest_asset);
                 intent.putExtra("DRAGGABLE1", R.drawable.generic_egg3_asset);
