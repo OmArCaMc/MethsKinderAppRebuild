@@ -1,5 +1,6 @@
 package com.example.animate;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -14,6 +15,13 @@ import androidx.core.view.WindowInsetsCompat;
 public class topic2screen extends AppCompatActivity {
     // Declare a button named back to return.
     Button back;
+    // Declare buttons to each exercise.
+    Button question1;
+    Button question2;
+    Button question3;
+    Button question4;
+    Button question5;
+    Button question6;
 
     @Override
     // Method called when the activity is first created.
