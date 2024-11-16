@@ -52,5 +52,113 @@ public class topic2screen extends AppCompatActivity {
                 finish();
             }
         });
+
+        question1 = (Button) findViewById(R.id.question1);
+        question1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(topic2screen.this, SelectOptionMod.class);
+
+                intent.putExtra("INSTRUCTION", R.string.Instruction_2_1);
+                intent.putExtra("ILLUSTRATION", R.drawable.question_2_1);
+                intent.putExtra("OP1", R.drawable.generic_squirrel_asset);
+                intent.putExtra("OP2", R.drawable.generic_fox_asset);
+                intent.putExtra("OP3", R.drawable.generic_bird_asset);
+                intent.putExtra("RightOp", 2);
+                intent.putExtra("BACK_BUTTON_IMAGE", R.drawable.back_topic2_1_asset);
+
+                startActivity(intent);
+            }
+        });
+
+        question2 = (Button) findViewById(R.id.question2);
+        question2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(topic2screen.this, SelectOptionMod.class);
+
+                intent.putExtra("INSTRUCTION", R.string.Instruction_2_2);
+                intent.putExtra("ILLUSTRATION", R.drawable.question_2_2);
+                intent.putExtra("OP1", R.drawable.generic_squirrel_asset);
+                intent.putExtra("OP2", R.drawable.generic_fox_asset);
+                intent.putExtra("OP3", R.drawable.generic_bird_asset);
+                intent.putExtra("RightOp", 2);
+                intent.putExtra("BACK_BUTTON_IMAGE", R.drawable.back_topic2_2_asset);
+
+                startActivity(intent);
+            }
+        });
+
+        question3 = (Button) findViewById(R.id.question3);
+        question3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(topic2screen.this, SelectOptionMod.class);
+
+                intent.putExtra("INSTRUCTION", R.string.Instruction_2_3);
+                intent.putExtra("ILLUSTRATION", R.drawable.question_2_3);
+                intent.putExtra("OP1", R.drawable.generic_squirrel_asset);
+                intent.putExtra("OP2", R.drawable.generic_fox_asset);
+                intent.putExtra("OP3", R.drawable.generic_bird_asset);
+                intent.putExtra("RightOp", 2);
+                intent.putExtra("BACK_BUTTON_IMAGE", R.drawable.back_topic2_3_asset);
+
+                startActivity(intent);
+            }
+        });
+
+        question4 = (Button) findViewById(R.id.question4);
+        question4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(topic2screen.this, SelectOptionMod.class);
+
+                intent.putExtra("INSTRUCTION", R.string.Instruction_2_4);
+                intent.putExtra("ILLUSTRATION", R.drawable.question_2_4);
+                intent.putExtra("OP1", R.drawable.generic_squirrel_asset);
+                intent.putExtra("OP2", R.drawable.generic_fox_asset);
+                intent.putExtra("OP3", R.drawable.generic_bird_asset);
+                intent.putExtra("RightOp", 2);
+                intent.putExtra("BACK_BUTTON_IMAGE", R.drawable.back_topic2_4_asset);
+
+                startActivity(intent);
+            }
+        });
+
+        question5 = (Button) findViewById(R.id.question5);
+        question5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(topic2screen.this, SelectOptionMod.class);
+
+                intent.putExtra("INSTRUCTION", R.string.Instruction_2_5);
+                intent.putExtra("ILLUSTRATION", R.drawable.question_2_5);
+                intent.putExtra("OP1", R.drawable.generic_squirrel_asset);
+                intent.putExtra("OP2", R.drawable.generic_fox_asset);
+                intent.putExtra("OP3", R.drawable.generic_bird_asset);
+                intent.putExtra("RightOp", 2);
+                intent.putExtra("BACK_BUTTON_IMAGE", R.drawable.back_topic2_5_asset);
+
+                startActivity(intent);
+            }
+        });
+
+        question6 = (Button) findViewById(R.id.question6);
+        question6.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(topic2screen.this, SelectOptionMod.class);
+
+                intent.putExtra("INSTRUCTION", R.string.Instruction_2_6);
+                intent.putExtra("ILLUSTRATION", R.drawable.question_2_6);
+                intent.putExtra("OP1", R.drawable.generic_squirrel_asset);
+                intent.putExtra("OP2", R.drawable.generic_fox_asset);
+                intent.putExtra("OP3", R.drawable.generic_bird_asset);
+                intent.putExtra("RightOp", 2);
+                intent.putExtra("BACK_BUTTON_IMAGE", R.drawable.back_topic2_6_asset);
+
+                startActivity(intent);
+            }
+        });
     }
 }
