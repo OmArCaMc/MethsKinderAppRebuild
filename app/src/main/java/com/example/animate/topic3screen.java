@@ -113,11 +113,29 @@ public class topic3screen extends AppCompatActivity {
 
                 intent.putExtra("INSTRUCTION", R.string.Instruction_3_4);
                 intent.putExtra("ILLUSTRATION", R.drawable.question_3_4);
-                intent.putExtra("OP1", R.drawable.generic_turtle_asset);
+                intent.putExtra("OP1", R.drawable.generic_sloth_asset);
                 intent.putExtra("OP2", R.drawable.generic_snail_asset);
                 intent.putExtra("OP3", R.drawable.generic_sheep_asset);
                 intent.putExtra("RightOp", 3); // Establece la opción correcta (ej. 1)
                 intent.putExtra("BACK_BUTTON_IMAGE", R.drawable.back_topic3_4_asset);
+
+                startActivity(intent);
+            }
+        });
+
+        question5 = (Button) findViewById(R.id.question5);
+        question5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(topic3screen.this, dragMultipleImagesTimeline.class);
+                intent.putExtra("DRAGGABLE0", R.drawable.generic_flower3_asset);
+                intent.putExtra("FRAME0", R.drawable.generic_flower1_asset);
+                intent.putExtra("DRAGGABLE1", R.drawable.generic_flower4_asset);
+                intent.putExtra("FRAME1", R.drawable.generic_flower1_asset);
+                intent.putExtra("DRAGGABLE2", R.drawable.generic_flower5_asset);
+                intent.putExtra("FRAME2", R.drawable.generic_flower1_asset);
+                intent.putExtra("INSTRUCTION", R.string.Instruction_3_5);
+                intent.putExtra("BACK_BUTTON_IMAGE", R.drawable.back_topic3_5_asset);
 
                 startActivity(intent);
             }
