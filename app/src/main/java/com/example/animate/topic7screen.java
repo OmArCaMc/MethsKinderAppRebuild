@@ -96,12 +96,12 @@ public class topic7screen extends AppCompatActivity {
                 Intent intent = new Intent(topic7screen.this, SelectOptionMod.class);
 
                 intent.putExtra("INSTRUCTION", R.string.Instruction_7_3);
-                intent.putExtra("ILLUSTRATION", R.drawable.question_7_1);
-                intent.putExtra("OP1", R.drawable.generic_lion_asset);
-                intent.putExtra("OP2", R.drawable.generic_turtle_asset);
-                intent.putExtra("OP3", R.drawable.generic_monkey_2_asset);
-                intent.putExtra("RightOp", 2); // Establece la opción correcta (ej. 1)
-                intent.putExtra("BACK_BUTTON_IMAGE", R.drawable.back_topic7_2_asset);
+                intent.putExtra("ILLUSTRATION", R.drawable.question_7_3);
+                intent.putExtra("OP1", R.drawable.generic_racoon_asset);
+                intent.putExtra("OP2", R.drawable.generic_squirrel_asset);
+                intent.putExtra("OP3", R.drawable.generic_whale_asset);
+                intent.putExtra("RightOp", 3); // Establece la opción correcta (ej. 1)
+                intent.putExtra("BACK_BUTTON_IMAGE", R.drawable.back_topic7_3_asset);
 
                 startActivity(intent);
             }
