@@ -154,12 +154,23 @@ public class dragMultipleImagesTimeline extends AppCompatActivity {
     }
 
     private void generateLayout(){
+        boolean[] pickedFrames = new boolean[3];
+        boolean[] pickedDrag = new boolean[3];
+        positions = new int[2][3];
+        Random random = new Random();
         for (int i = 0; i < 3; i++) {
+            int index;
+            do {
+                index = random.nextInt(3); // Pick a random index
+            } while (pickedDrag[index]); // Ensure the index has not been picked
+
             // Assign the element from the original array to the new array
-            ImageView draggable = findViewById(views[0][i]);
+            ImageView draggable = findViewById(views[0][index]);
             draggable.setImageResource(correlations[0][i]);
-            correlations[0][i] = views[0][i];
+            correlations[0][i] = views[0][index];
             setDraggable(draggable);
+//            positions[0][i] = correlations[0][index];
+            pickedDrag[index] = true; // Mark this index as picked
         }
         for (int i = 0; i < 3; i++) {
             ImageView frame = findViewById(views[1][i]);
