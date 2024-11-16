@@ -136,7 +136,7 @@ public class topic7screen extends AppCompatActivity {
                 intent.putExtra("OP1", R.drawable.generic_kangaroo_asset);
                 intent.putExtra("OP2", R.drawable.generic_dog_asset);
                 intent.putExtra("OP3", R.drawable.generic_turtle_asset);
-                intent.putExtra("RightOp", 2); // Establece la opción correcta (ej. 1)
+                intent.putExtra("RightOp", 1); // Establece la opción correcta (ej. 1)
                 intent.putExtra("BACK_BUTTON_IMAGE", R.drawable.back_topic7_5_asset);
 
                 startActivity(intent);
