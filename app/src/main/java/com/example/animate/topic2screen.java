@@ -75,16 +75,14 @@ public class topic2screen extends AppCompatActivity {
         question2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(topic2screen.this, SelectOptionMod.class);
+                Intent intent = new Intent(topic2screen.this, draggableImage.class);
 
+                intent.putExtra("DRAGGABLE0", R.drawable.generic_monkey_1_asset);
+                intent.putExtra("FIXED0", R.drawable.generic_tree_asset_1);
                 intent.putExtra("INSTRUCTION", R.string.Instruction_2_2);
-                intent.putExtra("ILLUSTRATION", R.drawable.question_2_2);
-                intent.putExtra("OP1", R.drawable.generic_bird_asset);
-                intent.putExtra("OP2", R.drawable.generic_dog_asset);
-                intent.putExtra("OP3", R.drawable.generic_cat_asset);
-                intent.putExtra("RightOp", 1);
                 intent.putExtra("BACK_BUTTON_IMAGE", R.drawable.back_topic2_2_asset);
-
+                // above, below, left, right
+                intent.putExtra("EXPECTED_POSITION", "below");
                 startActivity(intent);
             }
         });
@@ -93,16 +91,14 @@ public class topic2screen extends AppCompatActivity {
         question3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(topic2screen.this, SelectOptionMod.class);
+                Intent intent = new Intent(topic2screen.this, draggableImage.class);
 
+                intent.putExtra("DRAGGABLE0", R.drawable.generic_butterfly_asset);
+                intent.putExtra("FIXED0", R.drawable.generic_flower5_asset);
                 intent.putExtra("INSTRUCTION", R.string.Instruction_2_3);
-                intent.putExtra("ILLUSTRATION", R.drawable.question_2_3);
-                intent.putExtra("OP1", R.drawable.generic_bird_asset);
-                intent.putExtra("OP2", R.drawable.generic_snake_asset);
-                intent.putExtra("OP3", R.drawable.generic_deer_asset);
-                intent.putExtra("RightOp", 2);
                 intent.putExtra("BACK_BUTTON_IMAGE", R.drawable.back_topic2_3_asset);
-
+                // above, below, left, right
+                intent.putExtra("EXPECTED_POSITION", "above");
                 startActivity(intent);
             }
         });
@@ -129,16 +125,14 @@ public class topic2screen extends AppCompatActivity {
         question5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(topic2screen.this, SelectOptionMod.class);
+                Intent intent = new Intent(topic2screen.this, draggableImage.class);
 
+                intent.putExtra("DRAGGABLE0", R.drawable.generic_banana_asset);
+                intent.putExtra("FIXED0", R.drawable.generic_monkey_2_asset);
                 intent.putExtra("INSTRUCTION", R.string.Instruction_2_5);
-                intent.putExtra("ILLUSTRATION", R.drawable.question_2_5);
-                intent.putExtra("OP1", R.drawable.generic_penguin_asset);
-                intent.putExtra("OP2", R.drawable.generic_snake_asset);
-                intent.putExtra("OP3", R.drawable.generic_fox_asset);
-                intent.putExtra("RightOp", 1);
                 intent.putExtra("BACK_BUTTON_IMAGE", R.drawable.back_topic2_5_asset);
-
+                // above, below, left, right
+                intent.putExtra("EXPECTED_POSITION", "left");
                 startActivity(intent);
             }
         });

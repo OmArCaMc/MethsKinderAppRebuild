@@ -22,10 +22,10 @@
     <string name="Instruction_1_4">Cual animal aparece en la imagen</string>
 
     <string name="Instruction_2_1">¿Cuál animalito está más lejos del gato?</string>
-    <string name="Instruction_2_2">¿Cuál animalito está más cerca del oso?</string>
-    <string name="Instruction_2_3">¿Cuál animalito está a la izquierda del león?</string>
+    <string name="Instruction_2_2">Coloca el mono en la base del árbol</string>
+    <string name="Instruction_2_3">Coloca la mariposa arriba de la flor</string>
     <string name="Instruction_2_4">¿Cuál animalito está entre el perro y el mono?</string>
-    <string name="Instruction_2_5">¿Cuál animalito está debajo del pájaro?</string>
+    <string name="Instruction_2_5">Coloca la banana a la izquierda del mono</string>
     <string name="Instruction_2_6">¿Cuál animalito está arriba del pato?</string>
 
     <string name="Instruction_6_1">¿Cuál animalito es el siguiente?</string>

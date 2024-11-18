@@ -74,7 +74,7 @@ public class topic1screen extends AppCompatActivity {
                 intent.putExtra("INSTRUCTION", R.string.Instruction_1_2);
                 intent.putExtra("BACK_BUTTON_IMAGE", R.drawable.back_topic1_2_asset);
                 // above, below, left, right
-                intent.putExtra("EXPECTED_POSITION", "below");
+                intent.putExtra("EXPECTED_POSITION", "above");
                 startActivity(intent);
             }
         });
