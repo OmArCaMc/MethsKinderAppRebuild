@@ -61,10 +61,10 @@ public class topic2screen extends AppCompatActivity {
 
                 intent.putExtra("INSTRUCTION", R.string.Instruction_2_1);
                 intent.putExtra("ILLUSTRATION", R.drawable.question_2_1);
-                intent.putExtra("OP1", R.drawable.generic_squirrel_asset);
-                intent.putExtra("OP2", R.drawable.generic_fox_asset);
-                intent.putExtra("OP3", R.drawable.generic_bird_asset);
-                intent.putExtra("RightOp", 2);
+                intent.putExtra("OP1", R.drawable.generic_bird_asset);
+                intent.putExtra("OP2", R.drawable.generic_snake_asset);
+                intent.putExtra("OP3", R.drawable.generic_bear_asset);
+                intent.putExtra("RightOp", 3);
                 intent.putExtra("BACK_BUTTON_IMAGE", R.drawable.back_topic2_1_asset);
 
                 startActivity(intent);
@@ -79,10 +79,10 @@ public class topic2screen extends AppCompatActivity {
 
                 intent.putExtra("INSTRUCTION", R.string.Instruction_2_2);
                 intent.putExtra("ILLUSTRATION", R.drawable.question_2_2);
-                intent.putExtra("OP1", R.drawable.generic_squirrel_asset);
-                intent.putExtra("OP2", R.drawable.generic_fox_asset);
-                intent.putExtra("OP3", R.drawable.generic_bird_asset);
-                intent.putExtra("RightOp", 2);
+                intent.putExtra("OP1", R.drawable.generic_bird_asset);
+                intent.putExtra("OP2", R.drawable.generic_dog_asset);
+                intent.putExtra("OP3", R.drawable.generic_cat_asset);
+                intent.putExtra("RightOp", 1);
                 intent.putExtra("BACK_BUTTON_IMAGE", R.drawable.back_topic2_2_asset);
 
                 startActivity(intent);
@@ -97,9 +97,9 @@ public class topic2screen extends AppCompatActivity {
 
                 intent.putExtra("INSTRUCTION", R.string.Instruction_2_3);
                 intent.putExtra("ILLUSTRATION", R.drawable.question_2_3);
-                intent.putExtra("OP1", R.drawable.generic_squirrel_asset);
-                intent.putExtra("OP2", R.drawable.generic_fox_asset);
-                intent.putExtra("OP3", R.drawable.generic_bird_asset);
+                intent.putExtra("OP1", R.drawable.generic_bird_asset);
+                intent.putExtra("OP2", R.drawable.generic_snake_asset);
+                intent.putExtra("OP3", R.drawable.generic_deer_asset);
                 intent.putExtra("RightOp", 2);
                 intent.putExtra("BACK_BUTTON_IMAGE", R.drawable.back_topic2_3_asset);
 
@@ -115,9 +115,9 @@ public class topic2screen extends AppCompatActivity {
 
                 intent.putExtra("INSTRUCTION", R.string.Instruction_2_4);
                 intent.putExtra("ILLUSTRATION", R.drawable.question_2_4);
-                intent.putExtra("OP1", R.drawable.generic_squirrel_asset);
+                intent.putExtra("OP1", R.drawable.generic_penguin_asset);
                 intent.putExtra("OP2", R.drawable.generic_fox_asset);
-                intent.putExtra("OP3", R.drawable.generic_bird_asset);
+                intent.putExtra("OP3", R.drawable.generic_monkey_2_asset);
                 intent.putExtra("RightOp", 2);
                 intent.putExtra("BACK_BUTTON_IMAGE", R.drawable.back_topic2_4_asset);
 
@@ -133,10 +133,10 @@ public class topic2screen extends AppCompatActivity {
 
                 intent.putExtra("INSTRUCTION", R.string.Instruction_2_5);
                 intent.putExtra("ILLUSTRATION", R.drawable.question_2_5);
-                intent.putExtra("OP1", R.drawable.generic_squirrel_asset);
-                intent.putExtra("OP2", R.drawable.generic_fox_asset);
-                intent.putExtra("OP3", R.drawable.generic_bird_asset);
-                intent.putExtra("RightOp", 2);
+                intent.putExtra("OP1", R.drawable.generic_penguin_asset);
+                intent.putExtra("OP2", R.drawable.generic_snake_asset);
+                intent.putExtra("OP3", R.drawable.generic_fox_asset);
+                intent.putExtra("RightOp", 1);
                 intent.putExtra("BACK_BUTTON_IMAGE", R.drawable.back_topic2_5_asset);
 
                 startActivity(intent);
@@ -151,10 +151,10 @@ public class topic2screen extends AppCompatActivity {
 
                 intent.putExtra("INSTRUCTION", R.string.Instruction_2_6);
                 intent.putExtra("ILLUSTRATION", R.drawable.question_2_6);
-                intent.putExtra("OP1", R.drawable.generic_squirrel_asset);
-                intent.putExtra("OP2", R.drawable.generic_fox_asset);
-                intent.putExtra("OP3", R.drawable.generic_bird_asset);
-                intent.putExtra("RightOp", 2);
+                intent.putExtra("OP1", R.drawable.generic_bird_asset);
+                intent.putExtra("OP2", R.drawable.generic_duck_asset);
+                intent.putExtra("OP3", R.drawable.generic_tiger_asset);
+                intent.putExtra("RightOp", 3);
                 intent.putExtra("BACK_BUTTON_IMAGE", R.drawable.back_topic2_6_asset);
 
                 startActivity(intent);
