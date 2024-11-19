@@ -19,7 +19,21 @@
     <string name="Instruction_1_1">Relaciona los animales</string>
     <string name="Instruction_1_2">Coloca el mono en la base del árbol</string>
     <string name="Instruction_1_3">()</string>
-    <string name="Instruction_1_4">Cual animal aparece en la imagen</string>
+    <string name="Instruction_1_4">¿Cuál animal aparece en la imagen?</string>
+
+    <string name="Instruction_3_1">Ayuda a los animalitos a comer. Arrastra la comida que les gusta hasta ellos.</string>
+    <string name="Instruction_3_2">¿De qué animalito es la sombra que aparece?</string>
+    <string name="Instruction_3_3">Junta a los monitos, a los gatitos y a los pajaritos con sus amigos.</string>
+    <string name="Instruction_3_4">Elige la opción donde cada tucán tenga su nido.</string>
+    <string name="Instruction_3_5">Reparte los bananos para que cada monito tenga el suyo.</string>
+    <string name="Instruction_3_6">Dale 1 fresa al pato, 2 al perrito y 3 a la tortuga. ¡Ayúdalos a comer!</string>
+
+    <string name="Instruction_4_1">¿Cuál grupo de chanchitos tiene la misma cantidad que en la imagen?</string>
+    <string name="Instruction_4_2">¡Ayuda a los elefantes a encontrar a sus amigos!\nArrastra los grupos que tienen el mismo número y ponlos juntos, uno encima del otro.</string>
+    <string name="Instruction_4_3">¡Mira la imagen! ¿Qué opción tiene la misma cantidad de jirafas?</string>
+    <string name="Instruction_4_4">¡Observa bien! ¿Qué grupo de animalitos tiene la misma cantidad que la imagen?</string>
+    <string name="Instruction_4_5">¡Ayuda a los pollitos! Arrastra cada grupo a un nido para que todos tengan su casita.</string>
+    <string name="Instruction_4_6">¡Ayuda a los tucanes! ¿Qué grupo de ramas los puede tapar?</string>
 
     <string name="Instruction_6_1">¿Cuál animalito es el siguiente?</string>
     <string name="Instruction_6_2">¿Cuál animalito es el siguiente?</string>
