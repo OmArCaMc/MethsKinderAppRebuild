@@ -19,7 +19,7 @@ public class topic1screen extends AppCompatActivity {
     Button question3;
     Button question4;
     Button question5;
-
+    Button question6;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -118,5 +118,40 @@ public class topic1screen extends AppCompatActivity {
             }
         });
 
+        question5 = (Button) findViewById(R.id.question5);
+        question5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(topic1screen.this, dragMultipleImagesMod.class);
+                intent.putExtra("DRAGGABLE0", R.drawable.generic_giraffe_asset);
+                intent.putExtra("FRAME0", R.drawable.generic_elephant_asset);
+                intent.putExtra("DRAGGABLE1", R.drawable.generic_dog_asset);
+                intent.putExtra("FRAME1", R.drawable.generic_fox_asset);
+                intent.putExtra("DRAGGABLE2", R.drawable.generic_tucan_asset);
+                intent.putExtra("FRAME2", R.drawable.generic_duck_asset);
+                intent.putExtra("INSTRUCTION", R.string.Instruction_1_5);
+                intent.putExtra("BACK_BUTTON_IMAGE", R.drawable.back_topic1_5_asset);
+
+                startActivity(intent);
+            }
+        });
+
+        question6 = (Button) findViewById(R.id.question6);
+        question6.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(topic1screen.this, dragMultipleImagesMod.class);
+                intent.putExtra("DRAGGABLE0", R.drawable.generic_egg1_asset);
+                intent.putExtra("FRAME0", R.drawable.generic_nest_asset);
+                intent.putExtra("DRAGGABLE1", R.drawable.generic_egg3_asset);
+                intent.putExtra("FRAME1", R.drawable.generic_nest_asset);
+                intent.putExtra("DRAGGABLE2", R.drawable.generic_egg5_asset);
+                intent.putExtra("FRAME2", R.drawable.generic_nest_asset);
+                intent.putExtra("INSTRUCTION", R.string.Instruction_1_6);
+                intent.putExtra("BACK_BUTTON_IMAGE", R.drawable.back_topic1_6_asset);
+
+                startActivity(intent);
+            }
+        });
     }
 }
