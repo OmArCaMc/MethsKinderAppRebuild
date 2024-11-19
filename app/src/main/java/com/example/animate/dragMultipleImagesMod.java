@@ -203,6 +203,11 @@ public class dragMultipleImagesMod extends AppCompatActivity {
                         dX = v.getX() - event.getRawX();
                         dY = v.getY() - event.getRawY();
                         lastAction = MotionEvent.ACTION_DOWN;
+
+                        // Bring the view to the front
+                        v.bringToFront();
+                        v.getParent().requestLayout();
+                        v.invalidate();
                         break;
 
                     case MotionEvent.ACTION_MOVE:

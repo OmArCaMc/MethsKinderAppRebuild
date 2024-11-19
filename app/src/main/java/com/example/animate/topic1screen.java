@@ -141,12 +141,12 @@ public class topic1screen extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(topic1screen.this, dragMultipleImagesMod.class);
-                intent.putExtra("DRAGGABLE0", R.drawable.generic_egg1_asset);
-                intent.putExtra("FRAME0", R.drawable.generic_nest_asset);
-                intent.putExtra("DRAGGABLE1", R.drawable.generic_egg3_asset);
-                intent.putExtra("FRAME1", R.drawable.generic_nest_asset);
-                intent.putExtra("DRAGGABLE2", R.drawable.generic_egg5_asset);
-                intent.putExtra("FRAME2", R.drawable.generic_nest_asset);
+                intent.putExtra("DRAGGABLE0", R.drawable.generic_strawberry_asset);
+                intent.putExtra("FRAME0", R.drawable.generic_red_apple_asset);
+                intent.putExtra("DRAGGABLE1", R.drawable.generic_green_apple_asset);
+                intent.putExtra("FRAME1", R.drawable.generic_watermelon_asset);
+                intent.putExtra("DRAGGABLE2", R.drawable.generic_lemon_asset);
+                intent.putExtra("FRAME2", R.drawable.generic_banana_asset);
                 intent.putExtra("INSTRUCTION", R.string.Instruction_1_6);
                 intent.putExtra("BACK_BUTTON_IMAGE", R.drawable.back_topic1_6_asset);
 

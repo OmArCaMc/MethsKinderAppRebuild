@@ -20,8 +20,8 @@
     <string name="Instruction_1_2">¿Cuál es el animal más grande?</string>
     <string name="Instruction_1_3">¿Cuál es el animal que aparece más veces?</string>
     <string name="Instruction_1_4">¿Cuál bosque tiene más árboles?</string>
-    <string name="Instruction_1_5">Clasifica a los animales según su tamaño.</string>
-    <string name="Instruction_1_6">Clasifica a las frutas según su color.</string>
+    <string name="Instruction_1_5">Clasifica a los animales según su tamaño real.</string>
+    <string name="Instruction_1_6">Clasifica las frutas según su color.</string>
 
     <string name="Instruction_6_1">¿Cuál animalito es el siguiente?</string>
     <string name="Instruction_6_2">¿Cuál animalito es el siguiente?</string>
