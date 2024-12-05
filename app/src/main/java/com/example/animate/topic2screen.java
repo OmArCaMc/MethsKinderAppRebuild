@@ -141,6 +141,23 @@ public class topic2screen extends AppCompatActivity {
         question6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Intent intent = new Intent(topic2screen.this, draggableImage.class);
+
+                intent.putExtra("DRAGGABLE0", R.drawable.generic_grass_asset);
+                intent.putExtra("FIXED0", R.drawable.generic_cow_2_asset);
+                intent.putExtra("INSTRUCTION", R.string.Instruction_2_6);
+                intent.putExtra("BACK_BUTTON_IMAGE", R.drawable.back_topic2_6_asset);
+                // above, below, left, right
+                intent.putExtra("EXPECTED_POSITION", "right");
+                startActivity(intent);
+            }
+        });
+
+        /*
+        question6 = (Button) findViewById(R.id.question6);
+        question6.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
                 Intent intent = new Intent(topic2screen.this, SelectOptionMod.class);
 
                 intent.putExtra("INSTRUCTION", R.string.Instruction_2_6);
@@ -154,5 +171,7 @@ public class topic2screen extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+         */
     }
 }
