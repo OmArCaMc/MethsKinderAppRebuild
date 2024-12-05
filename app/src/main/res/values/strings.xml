@@ -23,6 +23,13 @@
     <string name="Instruction_1_5">Clasifica a los animales según su tamaño real.</string>
     <string name="Instruction_1_6">Clasifica las frutas según su color.</string>
 
+    <string name="Instruction_3_1">¿Cuál animal es el más lento?</string>
+    <string name="Instruction_3_2">Ordena las siguientes imágenes en antes, ahora y después.</string>
+    <string name="Instruction_3_3">¿Cuál imagen ocurrió primero?</string>
+    <string name="Instruction_3_4">¿Cuál animal es el más rápido?</string>
+    <string name="Instruction_3_5">Ordena las siguientes imágenes en antes, ahora y después.</string>
+    <string name="Instruction_3_6">¿Cuál animal es el más lento?</string>
+
     <string name="Instruction_6_1">¿Cuál animalito es el siguiente?</string>
     <string name="Instruction_6_2">¿Cuál animalito es el siguiente?</string>
     <string name="Instruction_6_3">¿Cuál animalito debería estar en esa posición? </string>
