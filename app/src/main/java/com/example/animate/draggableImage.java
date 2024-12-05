@@ -133,7 +133,9 @@ public class draggableImage extends AppCompatActivity {
         float fixedY = fixedImage.getY();
 
         // Calculate center positions
+        float draggableCenterX = draggableX + (draggableImage.getWidth() / 2);
         float draggableCenterY = draggableY + (draggableImage.getHeight() / 2);
+        float fixedCenterX = fixedX + (fixedImage.getWidth() / 2);
         float fixedCenterY = fixedY + (fixedImage.getHeight() / 2);
 
         // Tolerance for slight position difference
@@ -142,21 +144,21 @@ public class draggableImage extends AppCompatActivity {
         // Check based on expected position
         switch (expectedPosition) {
             case "above":
-                // Check if the draggable image is completely above the fixed image
-                Log.d("TAG", "Above Check: " + (draggableY + draggableImage.getHeight() - tolerance) + " < " + fixedY);
-                return (draggableY + draggableImage.getHeight() - tolerance) < fixedY;
+                // Check if the draggable image's center is above the fixed image's center
+                Log.d("TAG", "Above Check: " + draggableCenterY + " < " + (fixedCenterY - tolerance));
+                return draggableCenterY < (fixedCenterY - tolerance);
             case "below":
-                // Check if the draggable image is completely below the fixed image
+                // Check if the draggable image's center is below the fixed image's center
                 Log.d("TAG", "Below Check: " + draggableCenterY + " > " + (fixedCenterY + tolerance));
                 return draggableCenterY > (fixedCenterY + tolerance);
             case "left":
-                // Check if the draggable image is completely left of the fixed image
-                Log.d("TAG", "Left Check: " + fixedX + " > " + (draggableX + draggableImage.getWidth() - tolerance));
-                return fixedX > (draggableX + draggableImage.getWidth() - tolerance);
+                // Check if the draggable image's center is left of the fixed image's center
+                Log.d("TAG", "Left Check: " + draggableCenterX + " < " + (fixedCenterX - tolerance));
+                return draggableCenterX < (fixedCenterX - tolerance);
             case "right":
-                // Check if the draggable image is completely right of the fixed image
-                Log.d("TAG", "Right Check: " + (fixedX + fixedImage.getWidth() + tolerance) + " < " + draggableX);
-                return (fixedX + fixedImage.getWidth() + tolerance) < draggableX;
+                // Check if the draggable image's center is right of the fixed image's center
+                Log.d("TAG", "Right Check: " + draggableCenterX + " > " + (fixedCenterX + tolerance));
+                return draggableCenterX > (fixedCenterX + tolerance);
             default:
                 return false;
         }

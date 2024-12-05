@@ -44,6 +44,13 @@
     <string name="Instruction_5_5">Reparte los bananos para que cada monito tenga el suyo.</string>
     <string name="Instruction_5_6">Dale 1 fresa al pato, 2 al perrito y 3 a la tortuga. ¡Ayúdalos a comer!</string>
 
+    <string name="Instruction_2_1">¿Cuál animalito está más lejos del gato?</string>
+    <string name="Instruction_2_2">Coloca la ardilla en la base del árbol</string>
+    <string name="Instruction_2_3">Coloca la mariposa arriba de la flor</string>
+    <string name="Instruction_2_4">¿Cuál animalito está entre el perro y el mono?</string>
+    <string name="Instruction_2_5">Coloca la banana a la izquierda del mono</string>
+    <string name="Instruction_2_6">Coloca el pasto a la izquierda de la vaca</string>
+
     <string name="Instruction_6_1">¿Cuál animalito es el siguiente?</string>
     <string name="Instruction_6_2">¿Cuál animalito es el siguiente?</string>
     <string name="Instruction_6_3">¿Cuál animalito debería estar en esa posición? </string>
