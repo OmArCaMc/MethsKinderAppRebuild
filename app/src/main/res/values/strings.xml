@@ -30,6 +30,20 @@
     <string name="Instruction_3_5">Ordena las siguientes imágenes en antes, ahora y después.</string>
     <string name="Instruction_3_6">¿Cuál animal es el más lento?</string>
 
+    <string name="Instruction_4_1">¿Cuál grupo de chanchitos tiene la misma cantidad que en la imagen?</string>
+    <string name="Instruction_4_2">¡Ayuda a los elefantes a encontrar a sus amigos!\nArrastra los grupos que tienen el mismo número y ponlos juntos, uno encima del otro.</string>
+    <string name="Instruction_4_3">¡Mira la imagen! ¿Qué opción tiene la misma cantidad de jirafas?</string>
+    <string name="Instruction_4_4">¡Observa bien! ¿Qué grupo de animalitos tiene la misma cantidad que la imagen?</string>
+    <string name="Instruction_4_5">¡Ayuda a los pollitos! Arrastra cada grupo a un nido para que todos tengan su casita.</string>
+    <string name="Instruction_4_6">¡Ayuda a los tucanes! ¿Qué grupo de ramas los puede tapar?</string>
+
+    <string name="Instruction_5_1">Ayuda a los animalitos a comer.\n Arrastra la comida que les gusta hasta ellos.</string>
+    <string name="Instruction_5_2">¿De qué animalito es la sombra que aparece?</string>
+    <string name="Instruction_5_3">Junta a los monitos, a los gatitos y a los pajaritos con sus amigos.</string>
+    <string name="Instruction_5_4">Elige la opción donde cada tucán tenga su nido.</string>
+    <string name="Instruction_5_5">Reparte los bananos para que cada monito tenga el suyo.</string>
+    <string name="Instruction_5_6">Dale 1 fresa al pato, 2 al perrito y 3 a la tortuga. ¡Ayúdalos a comer!</string>
+
     <string name="Instruction_6_1">¿Cuál animalito es el siguiente?</string>
     <string name="Instruction_6_2">¿Cuál animalito es el siguiente?</string>
     <string name="Instruction_6_3">¿Cuál animalito debería estar en esa posición? </string>
