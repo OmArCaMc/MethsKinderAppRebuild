@@ -20,6 +20,7 @@ public class topic3screen extends AppCompatActivity {
     Button question3;
     Button question4;
     Button question5;
+    Button question6;
 
     @Override
     // Method called when the activity is first created.
@@ -136,6 +137,24 @@ public class topic3screen extends AppCompatActivity {
                 intent.putExtra("FRAME2", R.drawable.generic_flower1_asset);
                 intent.putExtra("INSTRUCTION", R.string.Instruction_3_5);
                 intent.putExtra("BACK_BUTTON_IMAGE", R.drawable.back_topic3_5_asset);
+
+                startActivity(intent);
+            }
+        });
+
+        question6 = (Button) findViewById(R.id.question6);
+        question6.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(topic3screen.this, SelectOptionMod.class);
+
+                intent.putExtra("INSTRUCTION", R.string.Instruction_3_6);
+                intent.putExtra("ILLUSTRATION", R.drawable.question_3_6);
+                intent.putExtra("OP1", R.drawable.generic_day1_asset);
+                intent.putExtra("OP2", R.drawable.generic_night1_asset);
+                intent.putExtra("OP3", R.drawable.generic_night2_asset);
+                intent.putExtra("RightOp", 1); // Establece la opción correcta (ej. 1)
+                intent.putExtra("BACK_BUTTON_IMAGE", R.drawable.back_topic3_6_asset);
 
                 startActivity(intent);
             }
