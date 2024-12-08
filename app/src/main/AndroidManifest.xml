@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools">
+    xmlns:tools="http://schemas.android.com/tools" >
 
     <application
         android:allowBackup="true"
@@ -12,16 +12,27 @@
         android:screenOrientation="landscape"
         android:supportsRtl="true"
         android:theme="@style/Theme.AniMate"
-        tools:targetApi="31">
+        tools:targetApi="31" >
+        <activity
+            android:name=".credits3screen"
+            android:exported="false" />
+        <activity
+            android:name=".credits2screen"
+            android:exported="false" />
+        <activity
+            android:name=".credits1screen"
+            android:exported="false" />
         <activity
             android:name=".matchingActivityNoMod"
             android:exported="false" />
         <activity
             android:name=".dragMultipleImages"
             android:exported="false" />
-        <activity android:name=".dragMultipleImagesMod"
+        <activity
+            android:name=".dragMultipleImagesMod"
             android:exported="false" />
-        <activity android:name=".dragMultipleImagesTimeline"
+        <activity
+            android:name=".dragMultipleImagesTimeline"
             android:exported="false" />
         <activity
             android:name=".draggableImage"
@@ -52,11 +63,10 @@
             android:exported="false" />
         <activity
             android:name=".SelectOptionMod"
-            android:exported="false"
-            />
+            android:exported="false" />
         <activity
             android:name=".startActivity"
-            android:exported="true">
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
