@@ -23,6 +23,13 @@
     <string name="Instruction_1_5">Clasifica a los animales según su tamaño real.</string>
     <string name="Instruction_1_6">Clasifica las frutas según su color.</string>
 
+    <string name="Instruction_2_1">¿Cuál animalito está más lejos del gato?</string>
+    <string name="Instruction_2_2">Coloca la ardilla abajo del árbol</string>
+    <string name="Instruction_2_3">Coloca la mariposa arriba de la flor</string>
+    <string name="Instruction_2_4">¿Cuál animalito está entre el perro y el mono?</string>
+    <string name="Instruction_2_5">Coloca la banana a la izquierda del mono</string>
+    <string name="Instruction_2_6">Coloca el pasto a la izquierda de la vaca</string>
+
     <string name="Instruction_3_1">¿Cuál animal es el más lento?</string>
     <string name="Instruction_3_2">Ordena las siguientes imágenes en antes, ahora y después.</string>
     <string name="Instruction_3_3">¿Cuál imagen ocurrió primero?</string>
@@ -41,15 +48,8 @@
     <string name="Instruction_5_2">¿De qué animalito es la sombra que aparece?</string>
     <string name="Instruction_5_3">Junta a los monitos, a los gatitos y a los pajaritos con sus amigos.</string>
     <string name="Instruction_5_4">Elige la opción donde cada tucán tenga su nido.</string>
-    <string name="Instruction_5_5">Reparte los bananos para que cada monito tenga el suyo.</string>
+    <string name="Instruction_5_5">Distribuye los bananos de manera que cada monito reciba uno.</string>
     <string name="Instruction_5_6">Dale 1 fresa al pato, 2 al perrito y 3 a la tortuga. ¡Ayúdalos a comer!</string>
-
-    <string name="Instruction_2_1">¿Cuál animalito está más lejos del gato?</string>
-    <string name="Instruction_2_2">Coloca la ardilla en la base del árbol</string>
-    <string name="Instruction_2_3">Coloca la mariposa arriba de la flor</string>
-    <string name="Instruction_2_4">¿Cuál animalito está entre el perro y el mono?</string>
-    <string name="Instruction_2_5">Coloca la banana a la izquierda del mono</string>
-    <string name="Instruction_2_6">Coloca el pasto a la izquierda de la vaca</string>
 
     <string name="Instruction_6_1">¿Cuál animalito es el siguiente?</string>
     <string name="Instruction_6_2">¿Cuál animalito es el siguiente?</string>
@@ -62,7 +62,7 @@
     <string name="Instruction_7_2">¿Cuál de estos animalitos es capaz de volar?</string>
     <string name="Instruction_7_3">¿Qué animalito vive bajo el agua?</string>
     <string name="Instruction_7_4">¿Cuál de estos animalitos tiene cuernos?</string>
-    <string name="Instruction_7_5">¿Cuál de estos animalitos puede saltar muy alto?</string>
+    <string name="Instruction_7_5">¿Cuál de estos animalitos puede saltar más alto?</string>
     <string name="Instruction_7_6">¿Cuál de estos animalitos puede trepar árboles más rapido?</string>
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>
