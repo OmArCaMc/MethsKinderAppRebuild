@@ -76,7 +76,7 @@ public class topic5screen extends AppCompatActivity {
                 Intent intent = new Intent(topic5screen.this, SelectOptionMod.class);
 
                 intent.putExtra("INSTRUCTION", R.string.Instruction_5_2);
-                intent.putExtra("ILLUSTRATION", R.drawable.question_5_2_bg);
+                intent.putExtra("ILLUSTRATION", R.drawable.generic_monkey_shadow_asset);
                 intent.putExtra("OP1", R.drawable.generic_cat_asset);
                 intent.putExtra("OP2", R.drawable.generic_hamster_asset);
                 intent.putExtra("OP3", R.drawable.generic_monkey_1_asset);
@@ -110,7 +110,7 @@ public class topic5screen extends AppCompatActivity {
                 Intent intent = new Intent(topic5screen.this, SelectOptionMod.class);
 
                 intent.putExtra("INSTRUCTION", R.string.Instruction_5_4);
-                intent.putExtra("ILLUSTRATION", R.drawable.question_5_4_bg);
+                intent.putExtra("ILLUSTRATION", R.drawable.question_5_4);
                 intent.putExtra("OP1", R.drawable.generic_nest_asset);
                 intent.putExtra("OP2", R.drawable.question_4_5_static_1);
                 intent.putExtra("OP3", R.drawable.question_4_5_static_2);

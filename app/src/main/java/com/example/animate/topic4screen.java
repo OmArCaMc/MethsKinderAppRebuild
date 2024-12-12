@@ -117,7 +117,7 @@ public class topic4screen extends AppCompatActivity {
                 intent.putExtra("ILLUSTRATION", R.drawable.question_4_4_bg);
                 intent.putExtra("OP1", R.drawable.question_4_4_op_1);
                 intent.putExtra("OP2", R.drawable.question_4_4_op_2);
-                intent.putExtra("OP3", R.drawable.question_4_4_op_3);
+                intent.putExtra("OP3", R.drawable.question_4_4_op_4);
                 intent.putExtra("RightOp", 1); // Establece la opción correcta (ej. 1)
                 intent.putExtra("BACK_BUTTON_IMAGE", R.drawable.back_topic4_4_asset);
 
@@ -150,7 +150,7 @@ public class topic4screen extends AppCompatActivity {
                 Intent intent = new Intent(topic4screen.this, SelectOptionMod.class);
 
                 intent.putExtra("INSTRUCTION", R.string.Instruction_4_6);
-                intent.putExtra("ILLUSTRATION", R.drawable.question_4_6_bg);
+                intent.putExtra("ILLUSTRATION", R.drawable.question_4_6);
                 intent.putExtra("OP1", R.drawable.question_4_6_op_1);
                 intent.putExtra("OP2", R.drawable.question_4_6_op_2);
                 intent.putExtra("OP3", R.drawable.question_4_6_op_3);
