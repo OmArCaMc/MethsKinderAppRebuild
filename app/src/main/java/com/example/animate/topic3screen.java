@@ -65,6 +65,8 @@ public class topic3screen extends AppCompatActivity {
                 intent.putExtra("OP3", R.drawable.generic_cat_asset);
                 intent.putExtra("RightOp", 1); // Establece la opción correcta (ej. 1)
                 intent.putExtra("BACK_BUTTON_IMAGE", R.drawable.back_topic3_1_asset);
+                intent.putExtra("SOUND_BUTTON_IMAGE", R.drawable.button_sound_asset);
+
 
                 startActivity(intent);
             }
@@ -83,6 +85,7 @@ public class topic3screen extends AppCompatActivity {
                 intent.putExtra("FRAME2", R.drawable.generic_nest_asset);
                 intent.putExtra("INSTRUCTION", R.string.Instruction_3_2);
                 intent.putExtra("BACK_BUTTON_IMAGE", R.drawable.back_topic3_2_asset);
+                intent.putExtra("SOUND_BUTTON_IMAGE", R.drawable.button_sound_asset);
 
                 startActivity(intent);
             }
@@ -101,6 +104,8 @@ public class topic3screen extends AppCompatActivity {
                 intent.putExtra("OP3", R.drawable.generic_egg4_asset);
                 intent.putExtra("RightOp", 1); // Establece la opción correcta (ej. 1)
                 intent.putExtra("BACK_BUTTON_IMAGE", R.drawable.back_topic3_3_asset);
+                intent.putExtra("SOUND_BUTTON_IMAGE", R.drawable.button_sound_asset);
+
 
                 startActivity(intent);
             }
@@ -119,6 +124,8 @@ public class topic3screen extends AppCompatActivity {
                 intent.putExtra("OP3", R.drawable.generic_sheep_asset);
                 intent.putExtra("RightOp", 3); // Establece la opción correcta (ej. 1)
                 intent.putExtra("BACK_BUTTON_IMAGE", R.drawable.back_topic3_4_asset);
+                intent.putExtra("SOUND_BUTTON_IMAGE", R.drawable.button_sound_asset);
+
 
                 startActivity(intent);
             }
@@ -129,14 +136,16 @@ public class topic3screen extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(topic3screen.this, dragMultipleImagesTimeline.class);
-                intent.putExtra("DRAGGABLE0", R.drawable.generic_flower3_asset);
+                intent.putExtra("DRAGGABLE0", R.drawable.generic_plant1_asset_transformed);
                 intent.putExtra("FRAME0", R.drawable.generic_flower1_asset);
-                intent.putExtra("DRAGGABLE1", R.drawable.generic_flower4_asset);
+                intent.putExtra("DRAGGABLE1", R.drawable.generic_plant2_asset);
                 intent.putExtra("FRAME1", R.drawable.generic_flower1_asset);
-                intent.putExtra("DRAGGABLE2", R.drawable.generic_flower5_asset);
+                intent.putExtra("DRAGGABLE2", R.drawable.generic_plant3_asset);
                 intent.putExtra("FRAME2", R.drawable.generic_flower1_asset);
                 intent.putExtra("INSTRUCTION", R.string.Instruction_3_5);
                 intent.putExtra("BACK_BUTTON_IMAGE", R.drawable.back_topic3_5_asset);
+                intent.putExtra("SOUND_BUTTON_IMAGE", R.drawable.button_sound_asset);
+
 
                 startActivity(intent);
             }
@@ -155,6 +164,8 @@ public class topic3screen extends AppCompatActivity {
                 intent.putExtra("OP3", R.drawable.generic_night2_asset);
                 intent.putExtra("RightOp", 1); // Establece la opción correcta (ej. 1)
                 intent.putExtra("BACK_BUTTON_IMAGE", R.drawable.back_topic3_6_asset);
+                intent.putExtra("SOUND_BUTTON_IMAGE", R.drawable.button_sound_asset);
+
 
                 startActivity(intent);
             }

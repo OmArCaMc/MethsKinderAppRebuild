@@ -20,6 +20,7 @@ import java.util.Random;
 public class SelectOptionMod extends AppCompatActivity {
 
     Button back;
+    Button sound;
     private int rightOp;
     private Handler pauseHandler;
 
@@ -41,6 +42,8 @@ public class SelectOptionMod extends AppCompatActivity {
             int randomNum = random.nextInt(100);
             setOptions(randomNum, intent);
             setBackButtonImage(intent.getIntExtra("BACK_BUTTON_IMAGE", 0));
+            setSoundButtonImage(intent.getIntExtra("SOUND_BUTTON_IMAGE", 0));
+
         }
         setOnClickListeners();
         setBackListener();
@@ -49,6 +52,10 @@ public class SelectOptionMod extends AppCompatActivity {
     }
     private void setBackButtonImage(int resourceId) {
         Button back = findViewById(R.id.backBttn);
+        back.setBackgroundResource(resourceId);
+    }
+    private void setSoundButtonImage(int resourceId) {
+        Button back = findViewById(R.id.soundBttn);
         back.setBackgroundResource(resourceId);
     }
     public void setIllustration(int resourceId){

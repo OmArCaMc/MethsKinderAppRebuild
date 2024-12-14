@@ -66,6 +66,8 @@ public class topic2screen extends AppCompatActivity {
                 intent.putExtra("OP3", R.drawable.generic_bear_asset);
                 intent.putExtra("RightOp", 3);
                 intent.putExtra("BACK_BUTTON_IMAGE", R.drawable.back_topic2_1_asset);
+                intent.putExtra("SOUND_BUTTON_IMAGE", R.drawable.button_sound_asset);
+
 
                 startActivity(intent);
             }
@@ -81,6 +83,7 @@ public class topic2screen extends AppCompatActivity {
                 intent.putExtra("FIXED0", R.drawable.generic_tree_asset_1);
                 intent.putExtra("INSTRUCTION", R.string.Instruction_2_2);
                 intent.putExtra("BACK_BUTTON_IMAGE", R.drawable.back_topic2_2_asset);
+                intent.putExtra("SOUND_BUTTON_IMAGE", R.drawable.button_sound_asset);
                 // above, below, left, right
                 intent.putExtra("EXPECTED_POSITION", "below");
                 startActivity(intent);
@@ -97,6 +100,8 @@ public class topic2screen extends AppCompatActivity {
                 intent.putExtra("FIXED0", R.drawable.generic_flower5_asset);
                 intent.putExtra("INSTRUCTION", R.string.Instruction_2_3);
                 intent.putExtra("BACK_BUTTON_IMAGE", R.drawable.back_topic2_3_asset);
+                intent.putExtra("SOUND_BUTTON_IMAGE", R.drawable.button_sound_asset);
+
                 // above, below, left, right
                 intent.putExtra("EXPECTED_POSITION", "above");
                 startActivity(intent);
@@ -116,6 +121,8 @@ public class topic2screen extends AppCompatActivity {
                 intent.putExtra("OP3", R.drawable.generic_monkey_2_asset);
                 intent.putExtra("RightOp", 2);
                 intent.putExtra("BACK_BUTTON_IMAGE", R.drawable.back_topic2_4_asset);
+                intent.putExtra("SOUND_BUTTON_IMAGE", R.drawable.button_sound_asset);
+
 
                 startActivity(intent);
             }
@@ -131,6 +138,8 @@ public class topic2screen extends AppCompatActivity {
                 intent.putExtra("FIXED0", R.drawable.generic_monkey_2_asset);
                 intent.putExtra("INSTRUCTION", R.string.Instruction_2_5);
                 intent.putExtra("BACK_BUTTON_IMAGE", R.drawable.back_topic2_5_asset);
+                intent.putExtra("SOUND_BUTTON_IMAGE", R.drawable.button_sound_asset);
+
                 // above, below, left, right
                 intent.putExtra("EXPECTED_POSITION", "left");
                 startActivity(intent);
@@ -147,6 +156,8 @@ public class topic2screen extends AppCompatActivity {
                 intent.putExtra("FIXED0", R.drawable.generic_cow_2_asset);
                 intent.putExtra("INSTRUCTION", R.string.Instruction_2_6);
                 intent.putExtra("BACK_BUTTON_IMAGE", R.drawable.back_topic2_6_asset);
+                intent.putExtra("SOUND_BUTTON_IMAGE", R.drawable.button_sound_asset);
+
                 // above, below, left, right
                 intent.putExtra("EXPECTED_POSITION", "right");
                 startActivity(intent);

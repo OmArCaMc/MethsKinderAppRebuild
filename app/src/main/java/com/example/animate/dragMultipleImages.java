@@ -24,6 +24,7 @@ public class dragMultipleImages extends AppCompatActivity {
     ImageView frame2;
     ImageView frame3;
     Button back;
+    Button sound;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +36,10 @@ public class dragMultipleImages extends AppCompatActivity {
         // Set the back button small modularization
         int backButtonImage = getIntent().getIntExtra("BACK_BUTTON_IMAGE", 0);
         setBackButtonImage(backButtonImage);
+
+        int soundButtonImage = getIntent().getIntExtra("SOUND_BUTTON_IMAGE", 0);
+        setSoundButtonImage(soundButtonImage);
+
 
         // Handle window insets as before
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
@@ -64,6 +69,11 @@ public class dragMultipleImages extends AppCompatActivity {
     private void setBackButtonImage(int resourceId) {
         Button back = findViewById(R.id.backBttn);
         back.setBackgroundResource(resourceId);
+    }
+
+    private void setSoundButtonImage(int resourceId) {
+        Button sound = findViewById(R.id.soundBttn);
+        sound.setBackgroundResource(resourceId);
     }
 
     @SuppressLint("ClickableViewAccessibility")

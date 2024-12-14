@@ -28,6 +28,7 @@ public class draggableImage extends AppCompatActivity {
     Button back;
     Button check;
     String expectedPosition;
+    Button sound;
 
     private int[][] correlations;
     private int[][] positions;
@@ -51,6 +52,9 @@ public class draggableImage extends AppCompatActivity {
         // Set the back button small modularization
         int backButtonImage = getIntent().getIntExtra("BACK_BUTTON_IMAGE", 0);
         setBackButtonImage(backButtonImage);
+
+        int soundButtonImage = getIntent().getIntExtra("SOUND_BUTTON_IMAGE", 0);
+        setSoundButtonImage(soundButtonImage);
 
         // Inflate and add the feedback layout to the root layout
         feedbackLayout = getLayoutInflater().inflate(R.layout.feedback_layout, null);
@@ -81,6 +85,11 @@ public class draggableImage extends AppCompatActivity {
     private void setBackButtonImage(int resourceId) {
         Button back = findViewById(R.id.backBttn);
         back.setBackgroundResource(resourceId);
+    }
+
+    private void setSoundButtonImage(int resourceId) {
+        Button sound = findViewById(R.id.soundBttn);
+        sound.setBackgroundResource(resourceId);
     }
 
     private void setCorrelations() {
