@@ -68,25 +68,29 @@
 
     <ImageButton
         android:id="@+id/op1"
-        app:layout_constraintTop_toBottomOf="@id/feedBack"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/op2"
-        android:layout_height="0dp"
         android:layout_width="0dp"
+        android:layout_height="0dp"
         android:background="@null"
-        android:scaleType="fitCenter" />
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toTopOf="@id/spacer"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/op2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/feedBack"
+        app:layout_constraintVertical_bias="0.1" />
 
     <ImageButton
         android:id="@+id/op2"
-        app:layout_constraintTop_toBottomOf="@id/feedBack"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@id/op1"
-        app:layout_constraintEnd_toStartOf="@id/op3"
-        android:layout_height="0dp"
         android:layout_width="0dp"
+        android:layout_height="0dp"
         android:background="@null"
-        android:scaleType="fitCenter" />
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toTopOf="@id/spacer"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/op3"
+        app:layout_constraintStart_toEndOf="@id/op1"
+        app:layout_constraintTop_toBottomOf="@id/feedBack"
+        app:layout_constraintVertical_bias="0.0" />
 
     <ImageButton
         android:id="@+id/op3"
@@ -97,7 +101,17 @@
         android:layout_height="0dp"
         android:layout_width="0dp"
         android:background="@null"
-        android:scaleType="fitCenter" />
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toTopOf="@id/spacer" />
+
+    <!-- Cuadro espaciador -->
+    <View
+        android:id="@+id/spacer"
+        android:layout_width="0dp"
+        android:layout_height="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <LinearLayout
         android:id="@+id/feedbackLayout"
