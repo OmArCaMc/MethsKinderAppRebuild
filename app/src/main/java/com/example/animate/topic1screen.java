@@ -59,6 +59,8 @@ public class topic1screen extends AppCompatActivity {
                 intent.putExtra("RightOp", 2); // Establece la opción correcta (ej. 1)
                 intent.putExtra("BACK_BUTTON_IMAGE", R.drawable.back_topic1_1_asset);
                 intent.putExtra("SOUND_BUTTON_IMAGE", R.drawable.button_sound_asset);
+                intent.putExtra("AUDIO_RESOURCE", R.raw.topic_1_question_1_audio);
+
 
                 startActivity(intent);
             }
@@ -78,7 +80,7 @@ public class topic1screen extends AppCompatActivity {
                 intent.putExtra("RightOp", 1); // Establece la opción correcta (ej. 1)
                 intent.putExtra("BACK_BUTTON_IMAGE", R.drawable.back_topic1_2_asset);
                 intent.putExtra("SOUND_BUTTON_IMAGE", R.drawable.button_sound_asset);
-
+                intent.putExtra("AUDIO_RESOURCE", R.raw.topic_1_question_2_audio);
 
                 startActivity(intent);
             }
@@ -98,6 +100,7 @@ public class topic1screen extends AppCompatActivity {
                 intent.putExtra("RightOp", 3); // Establece la opción correcta (ej. 1)
                 intent.putExtra("BACK_BUTTON_IMAGE", R.drawable.back_topic1_3_asset);
                 intent.putExtra("SOUND_BUTTON_IMAGE", R.drawable.button_sound_asset);
+                intent.putExtra("AUDIO_RESOURCE", R.raw.topic_1_question_3_audio);
 
 
                 startActivity(intent);
@@ -118,6 +121,7 @@ public class topic1screen extends AppCompatActivity {
                 intent.putExtra("RightOp", 1); // Establece la opción correcta (ej. 1)
                 intent.putExtra("BACK_BUTTON_IMAGE", R.drawable.back_topic1_4_asset);
                 intent.putExtra("SOUND_BUTTON_IMAGE", R.drawable.button_sound_asset);
+                intent.putExtra("AUDIO_RESOURCE", R.raw.topic_1_question_3_audio);
 
 
                 startActivity(intent);
@@ -138,6 +142,7 @@ public class topic1screen extends AppCompatActivity {
                 intent.putExtra("INSTRUCTION", R.string.Instruction_1_5);
                 intent.putExtra("BACK_BUTTON_IMAGE", R.drawable.back_topic1_5_asset);
                 intent.putExtra("SOUND_BUTTON_IMAGE", R.drawable.button_sound_asset);
+                intent.putExtra("AUDIO_RESOURCE", R.raw.topic_1_question_3_audio);
 
 
                 startActivity(intent);
@@ -158,6 +163,7 @@ public class topic1screen extends AppCompatActivity {
                 intent.putExtra("INSTRUCTION", R.string.Instruction_1_6);
                 intent.putExtra("BACK_BUTTON_IMAGE", R.drawable.back_topic1_6_asset);
                 intent.putExtra("SOUND_BUTTON_IMAGE", R.drawable.button_sound_asset);
+                intent.putExtra("AUDIO_RESOURCE", R.raw.topic_1_question_3_audio);
 
 
                 startActivity(intent);

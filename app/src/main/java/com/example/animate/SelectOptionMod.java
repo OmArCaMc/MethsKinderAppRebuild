@@ -16,6 +16,8 @@ import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.Random;
+import android.media.MediaPlayer;
+
 
 public class SelectOptionMod extends AppCompatActivity {
 
@@ -23,6 +25,7 @@ public class SelectOptionMod extends AppCompatActivity {
     Button sound;
     private int rightOp;
     private Handler pauseHandler;
+    private MediaPlayer mediaPlayer;
 
     @Override protected void onCreate(Bundle savedInstance){
         super.onCreate(savedInstance);
@@ -43,6 +46,7 @@ public class SelectOptionMod extends AppCompatActivity {
             setOptions(randomNum, intent);
             setBackButtonImage(intent.getIntExtra("BACK_BUTTON_IMAGE", 0));
             setSoundButtonImage(intent.getIntExtra("SOUND_BUTTON_IMAGE", 0));
+            setupSoundButton(intent.getIntExtra("AUDIO_RESOURCE", 0));
 
         }
         setOnClickListeners();
@@ -226,4 +230,34 @@ public class SelectOptionMod extends AppCompatActivity {
             }
         }
     }
+
+    private void setupSoundButton(int audioResource) {
+        sound = findViewById(R.id.soundBttn);
+        sound.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                playAudio(audioResource);
+            }
+        });
+    }
+
+    private void playAudio(int audioResource) {
+        // Si hay un audio reproduciéndose, lo detiene antes de iniciar uno nuevo
+        if (mediaPlayer != null) {
+            mediaPlayer.release();
+        }
+        mediaPlayer = MediaPlayer.create(this, audioResource);
+        mediaPlayer.start();
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        // Liberar recursos del MediaPlayer cuando la actividad se destruye
+        if (mediaPlayer != null) {
+            mediaPlayer.release();
+            mediaPlayer = null;
+        }
+    }
+
 }

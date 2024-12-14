@@ -19,6 +19,8 @@ import android.view.MotionEvent;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.media.MediaPlayer;
+
 
 import java.util.Random;
 
@@ -34,6 +36,8 @@ public class draggableImage extends AppCompatActivity {
     private int[][] positions;
     private int[][] views;
     private Handler pauseHandler;
+    private MediaPlayer mediaPlayer;
+
 
     // Define feedback layout views
     private View feedbackLayout;
@@ -55,6 +59,8 @@ public class draggableImage extends AppCompatActivity {
 
         int soundButtonImage = getIntent().getIntExtra("SOUND_BUTTON_IMAGE", 0);
         setSoundButtonImage(soundButtonImage);
+        setupSoundButton(getIntent().getIntExtra("AUDIO_RESOURCE", 0));
+
 
         // Inflate and add the feedback layout to the root layout
         feedbackLayout = getLayoutInflater().inflate(R.layout.feedback_layout, null);
@@ -80,6 +86,7 @@ public class draggableImage extends AppCompatActivity {
         generateLayout();
         setCheckListener();
         this.pauseHandler = new Handler(Looper.getMainLooper());
+
     }
 
     private void setBackButtonImage(int resourceId) {
@@ -245,5 +252,34 @@ public class draggableImage extends AppCompatActivity {
                             .start();
                 }, 3000))
                 .start();
+    }
+
+    private void setupSoundButton(int audioResource) {
+        sound = findViewById(R.id.soundBttn);
+        sound.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                playAudio(audioResource);
+            }
+        });
+    }
+
+    private void playAudio(int audioResource) {
+        // Si hay un audio reproduciéndose, lo detiene antes de iniciar uno nuevo
+        if (mediaPlayer != null) {
+            mediaPlayer.release();
+        }
+        mediaPlayer = MediaPlayer.create(this, audioResource);
+        mediaPlayer.start();
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        // Liberar recursos del MediaPlayer cuando la actividad se destruye
+        if (mediaPlayer != null) {
+            mediaPlayer.release();
+            mediaPlayer = null;
+        }
     }
 }

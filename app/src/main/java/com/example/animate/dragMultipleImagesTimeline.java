@@ -20,6 +20,8 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import java.util.Random;
+import android.media.MediaPlayer;
+
 
 public class dragMultipleImagesTimeline extends AppCompatActivity {
     // Declare attributes / assets
@@ -36,6 +38,8 @@ public class dragMultipleImagesTimeline extends AppCompatActivity {
     private int[][] positions;
     private int [][] views;
     private Handler pauseHandler;
+    private MediaPlayer mediaPlayer;
+
 
     // Define feedback layout views
     private View feedbackLayout;
@@ -56,6 +60,8 @@ public class dragMultipleImagesTimeline extends AppCompatActivity {
         // Set the back button small modularization
         int soundButtonImage = getIntent().getIntExtra("SOUND_BUTTON_IMAGE", 0);
         setSoundButtonImage(soundButtonImage);
+        setupSoundButton(getIntent().getIntExtra("AUDIO_RESOURCE", 0));
+
 
         // Inflate and add the feedback layout to the root layout
         feedbackLayout = getLayoutInflater().inflate(R.layout.feedback_layout, null);
@@ -266,5 +272,34 @@ public class dragMultipleImagesTimeline extends AppCompatActivity {
                             .start();
                 }, 3000))
                 .start();
+    }
+
+    private void setupSoundButton(int audioResource) {
+        sound = findViewById(R.id.soundBttn);
+        sound.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                playAudio(audioResource);
+            }
+        });
+    }
+
+    private void playAudio(int audioResource) {
+        // Si hay un audio reproduciéndose, lo detiene antes de iniciar uno nuevo
+        if (mediaPlayer != null) {
+            mediaPlayer.release();
+        }
+        mediaPlayer = MediaPlayer.create(this, audioResource);
+        mediaPlayer.start();
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        // Liberar recursos del MediaPlayer cuando la actividad se destruye
+        if (mediaPlayer != null) {
+            mediaPlayer.release();
+            mediaPlayer = null;
+        }
     }
 }
