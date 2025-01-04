@@ -255,6 +255,9 @@ public class dragMultipleImagesTimeline extends AppCompatActivity {
     }
 
     private void showFeedbackAnimation(boolean isCorrect, String feedbackMessage) {
+        int audioResource = isCorrect ? R.raw.exc_trabajo : R.raw.vuelve_intentar;
+        playAudio(audioResource);
+
         feedbackImage.setImageResource(isCorrect ? R.drawable.generic_happy_emoji : R.drawable.generic_sad_emoji);
         feedbackText.setText(feedbackMessage);
 

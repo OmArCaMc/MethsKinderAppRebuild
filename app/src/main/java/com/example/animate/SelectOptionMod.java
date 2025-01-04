@@ -139,6 +139,10 @@ public class SelectOptionMod extends AppCompatActivity {
     }
 
     private void showFeedbackAnimation(boolean isCorrect, String feedbackMessage) {
+
+        int audioResource = isCorrect ? R.raw.exc_trabajo : R.raw.vuelve_intentar;
+        playAudio(audioResource);
+
         // Get the views
         LinearLayout feedbackLayout = findViewById(R.id.feedbackLayout);
         ImageView feedbackImage = findViewById(R.id.feedbackImage);
