@@ -143,12 +143,12 @@ public class topic3screen extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(topic3screen.this, dragMultipleImagesTimeline.class);
-                intent.putExtra("DRAGGABLE0", R.drawable.generic_plant1_asset_transformed);
-                intent.putExtra("FRAME0", R.drawable.generic_flower1_asset);
-                intent.putExtra("DRAGGABLE1", R.drawable.generic_plant2_asset);
-                intent.putExtra("FRAME1", R.drawable.generic_flower1_asset);
-                intent.putExtra("DRAGGABLE2", R.drawable.generic_plant3_asset);
-                intent.putExtra("FRAME2", R.drawable.generic_flower1_asset);
+                intent.putExtra("DRAGGABLE0", R.drawable.generic_larve_asset);
+                intent.putExtra("FRAME0", R.drawable.generic_leafs_asset);
+                intent.putExtra("DRAGGABLE1", R.drawable.generic_cocoon_asset);
+                intent.putExtra("FRAME1", R.drawable.generic_leafs_asset);
+                intent.putExtra("DRAGGABLE2", R.drawable.generic_butterfly_asset);
+                intent.putExtra("FRAME2", R.drawable.generic_leafs_asset);
                 intent.putExtra("INSTRUCTION", R.string.Instruction_3_5);
                 intent.putExtra("BACK_BUTTON_IMAGE", R.drawable.back_topic3_5_asset);
                 intent.putExtra("SOUND_BUTTON_IMAGE", R.drawable.button_sound_asset);
