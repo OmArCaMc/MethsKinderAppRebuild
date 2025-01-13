@@ -9,14 +9,16 @@
 
     <Button
         android:id="@+id/backBttn"
-        android:layout_width="52dp"
-        android:layout_height="59dp"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintHorizontal_bias="0.058"
-        app:layout_constraintVertical_bias="0.132" />
+        app:layout_constraintVertical_bias="0.132"
+        app:layout_constraintHeight_percent="0.30"
+        />
 
     <Button
         android:id="@+id/soundBttn"
@@ -27,14 +29,16 @@
         app:layout_constraintHorizontal_bias="0.962"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.125" />
+        app:layout_constraintVertical_bias="0.125"
+        app:layout_constraintHeight_percent="0.30"
+        />
 
     <TextView
         android:id="@+id/instruction"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="sans-serif"
-        android:textSize="15sp"
+        android:textSize="20sp"
         android:textColor="@android:color/black"
         android:text="Clasifica los animales"
         android:gravity="center"
@@ -43,7 +47,9 @@
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.15" />
+        app:layout_constraintVertical_bias="0.15"
+        app:layout_constraintHeight_percent="0.30"
+        />
 
     <ImageView
         android:id="@+id/illustration"
@@ -53,18 +59,9 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
-        android:scaleType="fitCenter" />
+        android:scaleType="fitCenter"
+        app:layout_constraintHeight_percent="0.40"/>
 
-    <TextView
-        android:id="@+id/feedBack"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="200dp"
-        android:fontFamily="sans-serif"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.499"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/instruction" />
 
     <ImageButton
         android:id="@+id/op1"
@@ -77,7 +74,8 @@
         app:layout_constraintEnd_toStartOf="@id/op2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/feedBack"
-        app:layout_constraintVertical_bias="0.1" />
+        app:layout_constraintVertical_bias="0.1"
+        app:layout_constraintHeight_percent="0.25"/>
 
     <ImageButton
         android:id="@+id/op2"
@@ -90,7 +88,8 @@
         app:layout_constraintEnd_toStartOf="@id/op3"
         app:layout_constraintStart_toEndOf="@id/op1"
         app:layout_constraintTop_toBottomOf="@id/feedBack"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintHeight_percent="0.25"/>
 
     <ImageButton
         android:id="@+id/op3"
@@ -102,7 +101,8 @@
         android:layout_width="0dp"
         android:background="@null"
         android:scaleType="fitCenter"
-        app:layout_constraintBottom_toTopOf="@id/spacer" />
+        app:layout_constraintBottom_toTopOf="@id/spacer"
+        app:layout_constraintHeight_percent="0.25"/>
 
     <!-- Cuadro espaciador -->
     <View
