@@ -59,8 +59,8 @@ public class SelectOptionMod extends AppCompatActivity {
         back.setBackgroundResource(resourceId);
     }
     private void setSoundButtonImage(int resourceId) {
-        Button back = findViewById(R.id.soundBttn);
-        back.setBackgroundResource(resourceId);
+        Button sound = findViewById(R.id.soundBttn);
+        sound.setBackgroundResource(resourceId);
     }
     public void setIllustration(int resourceId){
         ImageView illustrationView = findViewById(R.id.illustration);
