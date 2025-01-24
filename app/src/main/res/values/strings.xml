@@ -20,7 +20,7 @@
     <string name="Instruction_1_2">¿Cuál es el animal más grande?</string>
     <string name="Instruction_1_3">¿Cuál es el animal que aparece más veces?</string>
     <string name="Instruction_1_4">¿Cuál bosque tiene más árboles?</string>
-    <string name="Instruction_1_5">Asocia a los animales de acuerdo a su tamaño real.</string>
+    <string name="Instruction_1_5">Asocia a los animales con otros del mismo tamaño\n según su tamaño real.</string>
     <string name="Instruction_1_6">Clasifica las frutas según su color.</string>
 
     <string name="Instruction_2_1">¿Cuál animalito está más lejos del gato?</string>
@@ -38,7 +38,7 @@
     <string name="Instruction_3_6">¿En cuál imagen es de día?</string>
 
     <string name="Instruction_4_1">¿Cuál grupo de chanchitos tiene la misma cantidad que en la imagen?</string>
-    <string name="Instruction_4_2">¡Ayuda a los elefantes a encontrar a sus amigos!\nArrastra los grupos que tienen el mismo número y ponlos juntos,\n uno encima del otro.</string>
+    <string name="Instruction_4_2">¡Ayuda a los elefantes a encontrar a sus amigos!\nArrastra los grupos que tienen la misma cantidad y ponlos juntos,\n uno encima del otro.</string>
     <string name="Instruction_4_3">¡Mira la imagen! ¿Qué opción tiene la misma cantidad de jirafas?</string>
     <string name="Instruction_4_4">¡Observa bien! \n¿Qué grupo de animalitos tiene la misma cantidad que la imagen?</string>
     <string name="Instruction_4_5">¡Ayuda a los pollitos! \nArrastra cada grupo a un nido para que todos tengan su casita.</string>
