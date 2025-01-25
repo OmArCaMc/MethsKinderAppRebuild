@@ -37,19 +37,19 @@
     <string name="Instruction_3_5">Ordena las siguientes imágenes en antes, ahora y después.</string>
     <string name="Instruction_3_6">¿En cuál imagen es de día?</string>
 
-    <string name="Instruction_4_1">¿Cuál grupo de chanchitos tiene la misma cantidad que en la imagen?</string>
-    <string name="Instruction_4_2">¡Ayuda a los elefantes a encontrar a sus amigos!\nArrastra los grupos que tienen la misma cantidad y ponlos juntos,\n uno encima del otro.</string>
-    <string name="Instruction_4_3">¡Mira la imagen! ¿Qué opción tiene la misma cantidad de jirafas?</string>
-    <string name="Instruction_4_4">¡Observa bien! \n¿Qué grupo de animalitos tiene la misma cantidad que la imagen?</string>
-    <string name="Instruction_4_5">¡Ayuda a los pollitos! \nArrastra cada grupo a un nido para que todos tengan su casita.</string>
-    <string name="Instruction_4_6">Elige el grupo de ramas que esté en las mismas posiciones\n que los tucanes.</string>
+    <string name="Instruction_4_1">¿Cuál grupo de chanchitos tiene la misma \ncantidad que en la imagen?</string>
+    <string name="Instruction_4_2">¡Ayuda a los elefantes a encontrar a sus amigos!\nArrastra los grupos que tienen la misma cantidad\n y ponlos juntos, uno encima del otro.</string>
+    <string name="Instruction_4_3">¡Mira la imagen! ¿Qué opción tiene la misma \ncantidad de jirafas?</string>
+    <string name="Instruction_4_4">¡Observa bien! ¿Qué grupo de animalitos tiene \nla misma cantidad que la imagen?</string>
+    <string name="Instruction_4_5">¡Ayuda a los pollitos! Arrastra cada grupo a un nido \npara que todos tengan su casita.</string>
+    <string name="Instruction_4_6">Elige el grupo de ramas que esté \nen las mismas posiciones que los tucanes.</string>
 
     <string name="Instruction_5_1">Ayuda a los animalitos a comer.\n Arrastra la comida que les gusta hasta ellos.</string>
     <string name="Instruction_5_2">¿De qué animalito es la sombra que aparece?</string>
     <string name="Instruction_5_3">Clasifica a los animalitos en primates, felinos y aves.</string>
     <string name="Instruction_5_4">Elige la opción donde cada tucán tenga su nido.</string>
-    <string name="Instruction_5_5">Distribuye los bananos de manera que cada monito reciba uno.</string>
-    <string name="Instruction_5_6">Dale 1 fresa al pato, 2 al perrito y 3 a la tortuga. ¡Ayúdalos a comer!</string>
+    <string name="Instruction_5_5">Distribuye los bananos de manera que \ncada monito reciba uno.</string>
+    <string name="Instruction_5_6">Dale 1 fresa al pato, 2 al perrito y 3 a la tortuga. \n¡Ayúdalos a comer!</string>
 
     <string name="Instruction_6_1">¿Cuál animalito es el siguiente?</string>
     <string name="Instruction_6_2">¿Cuál animalito es el siguiente?</string>
@@ -63,7 +63,7 @@
     <string name="Instruction_7_3">¿Qué animalito vive bajo el agua?</string>
     <string name="Instruction_7_4">¿Cuál de estos animalitos tiene cuernos?</string>
     <string name="Instruction_7_5">¿Cuál de estos animalitos puede saltar más alto?</string>
-    <string name="Instruction_7_6">¿Cuál de estos animalitos puede trepar árboles más rapido?</string>
+    <string name="Instruction_7_6">¿Cuál de estos animalitos puede trepar \nárboles más rapido?</string>
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>
     <string name="second_fragment_label">Second Fragment</string>
