@@ -93,20 +93,21 @@
         app:layout_constraintVertical_bias="0.0"
         app:layout_constraintHeight_percent="0.25"/>
 
+    <!-- Cuadro espaciador -->
     <ImageButton
         android:id="@+id/op3"
-        app:layout_constraintTop_toBottomOf="@id/illustration"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@id/op2"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_height="0dp"
         android:layout_width="0dp"
+        android:layout_height="0dp"
         android:background="@null"
         android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintBottom_toTopOf="@id/spacer"
-        app:layout_constraintHeight_percent="0.25"/>
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.25"
+        app:layout_constraintStart_toEndOf="@id/op2"
+        app:layout_constraintTop_toBottomOf="@id/illustration"
+        app:layout_constraintVertical_bias="1.0" />
 
-    <!-- Cuadro espaciador -->
     <View
         android:id="@+id/spacer"
         android:layout_width="0dp"
