@@ -123,7 +123,6 @@ public class SelectOptionMod extends AppCompatActivity {
     }
 
     private void optionClicked(int optionClicked){
-        TextView feedback = findViewById(R.id.feedBack);
 
         if (optionClicked == this.rightOp){
             showFeedbackAnimation(true, "¡Excelente trabajo!");
@@ -133,7 +132,7 @@ public class SelectOptionMod extends AppCompatActivity {
         this.pauseHandler.postDelayed(new Runnable() {
             @Override
             public void run() {
-                feedback.setText("");
+
             }
         }, 3000);
     }
