@@ -52,8 +52,8 @@
 
     <ImageView
         android:id="@+id/draggable_0"
-        android:layout_width="93dp"
-        android:layout_height="54dp"
+        android:layout_width="123dp"
+        android:layout_height="84dp"
         android:contentDescription="monkey image"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -65,8 +65,8 @@
 
     <ImageView
         android:id="@+id/draggable_1"
-        android:layout_width="93dp"
-        android:layout_height="54dp"
+        android:layout_width="123dp"
+        android:layout_height="84dp"
         android:contentDescription="monkey image"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -79,8 +79,8 @@
 
     <ImageView
         android:id="@+id/draggable_2"
-        android:layout_width="93dp"
-        android:layout_height="54dp"
+        android:layout_width="123dp"
+        android:layout_height="84dp"
         android:contentDescription="monkey image"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -93,45 +93,42 @@
 
     <ImageView
         android:id="@+id/frame_0"
-        android:layout_width="93dp"
-        android:layout_height="54dp"
+        android:layout_width="123dp"
+        android:layout_height="84dp"
         android:contentDescription="bear image"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.30"
         app:layout_constraintHorizontal_bias="0.2"
-        app:layout_constraintVertical_bias="0.84"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintHeight_percent="0.30"
-        />
+        app:layout_constraintVertical_bias="0.84" />
 
     <ImageView
         android:id="@+id/frame_1"
-        android:layout_width="93dp"
-        android:layout_height="54dp"
+        android:layout_width="123dp"
+        android:layout_height="84dp"
         android:contentDescription="tucan image"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.30"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintVertical_bias="0.84"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintHeight_percent="0.30"
-        />
+        app:layout_constraintVertical_bias="0.84" />
 
     <ImageView
         android:id="@+id/frame_2"
-        android:layout_width="93dp"
-        android:layout_height="54dp"
+        android:layout_width="123dp"
+        android:layout_height="84dp"
         android:contentDescription="bird image"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.30"
         app:layout_constraintHorizontal_bias="0.8"
-        app:layout_constraintVertical_bias="0.84"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintHeight_percent="0.30"
-        />
+        app:layout_constraintVertical_bias="0.84" />
 
     <Button
         android:id="@+id/check_bttn"
